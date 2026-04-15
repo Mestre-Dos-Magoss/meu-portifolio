@@ -1,7 +1,21 @@
+import About from './components/About'
+import Header from './components/Header'
+import Porfolio from './components/Portfolio'
+import Presentation from './components/Presentation'
+import Specialties from './components/Specialties'
+import Stacks from './components/Stacks'
+import { GlobalStyle } from './styles'
+
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <GlobalStyle />
+      <Header />
+      <Presentation />
+      <About />
+      <Specialties />
+      <Stacks />
+      <Porfolio />
     </>
   )
 }

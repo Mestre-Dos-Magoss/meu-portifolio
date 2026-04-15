@@ -1,0 +1,57 @@
+import Span from '../Span'
+import Button from '../Buttons'
+import SectionAbout from '../SectionAbout'
+import { InitialPresentation } from '../../styles'
+import * as S from './styles'
+
+import github from '../../assets/github.svg'
+import linkedin from '../../assets/linkedin.svg'
+
+const Presentation = () => (
+  <SectionAbout color="secundario">
+    <InitialPresentation>
+      <Span>Desenvolvedor Full Stack</Span>
+      <h2>
+        Transformando <span>Ideias em Código</span>
+      </h2>
+      <p>
+        Desenvolvedor apaixonado por criar experiências digitais excepcionais
+        através de código limpo e arquiteturas escaláveis.
+      </p>
+      <div>
+        <Button
+          color="secundario"
+          padding="16px 32px"
+          title="Clique aqui para ver os meus projetos no GitHub"
+          type="button"
+        >
+          Ver Projetos
+        </Button>
+        <Button
+          color="principal"
+          padding="16px 32px"
+          title="Clique aqui para entrar em contato comigo"
+          type="button"
+        >
+          Entrar em Contato
+        </Button>
+      </div>
+      <div>
+        <S.LinkContacts href="">
+          <img src={github} alt="" />
+        </S.LinkContacts>
+        <S.LinkContacts href="">
+          <img src={linkedin} alt="" />
+        </S.LinkContacts>
+      </div>
+    </InitialPresentation>
+    <InitialPresentation>
+      <img
+        src="https://uds.com.br/blog/wp-content/uploads/2023/05/Imagem-de-programador-trabalhando-em-desenvolvimento-de-software.jpg"
+        alt="Um programador em ação"
+      />
+    </InitialPresentation>
+  </SectionAbout>
+)
+
+export default Presentation
