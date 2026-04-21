@@ -2,13 +2,13 @@ import Span from '../Span'
 import Button from '../Buttons'
 import SectionAbout from '../SectionAbout'
 import { InitialPresentation } from '../../styles'
-import * as S from './styles'
 
 import github from '../../assets/github.svg'
 import linkedin from '../../assets/linkedin.svg'
+import LinkNetWorks from '../LinkNetWorks'
 
 const Presentation = () => (
-  <SectionAbout color="secundario" className='container'>
+  <SectionAbout color="secundario" className="container">
     <InitialPresentation>
       <Span>Desenvolvedor Full Stack</Span>
       <h2>
@@ -37,12 +37,18 @@ const Presentation = () => (
         </Button>
       </div>
       <div>
-        <S.LinkContacts href="">
-          <img src={github} alt="" />
-        </S.LinkContacts>
-        <S.LinkContacts href="">
-          <img src={linkedin} alt="" />
-        </S.LinkContacts>
+        <LinkNetWorks
+          name="Github"
+          description="Clique aqui para acessar o meu repositório no GitHub"
+          image={github}
+          link="#"
+        />
+        <LinkNetWorks
+          name="LinkedIn"
+          description="Clique aqui para acessar o meu perfil no LinkedIn"
+          image={linkedin}
+          link="#"
+        />
       </div>
     </InitialPresentation>
     <InitialPresentation>

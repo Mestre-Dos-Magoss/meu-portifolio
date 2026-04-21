@@ -1,5 +1,6 @@
 import About from './components/About'
 import Communication from './components/Communication'
+import Footer from './components/Footer'
 import Header from './components/Header'
 import Porfolio from './components/Portfolio'
 import Presentation from './components/Presentation'
@@ -18,6 +19,7 @@ function App() {
       <Stacks />
       <Porfolio />
       <Communication />
+      <Footer />
     </>
   )
 }

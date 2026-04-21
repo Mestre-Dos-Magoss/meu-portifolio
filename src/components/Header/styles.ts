@@ -32,6 +32,11 @@ export const Header = styled.header`
   }
   h1 {
     font-size: 24px;
+    color: #6f7dea;
+
+    span {
+      color: #8d96d5;
+    }
   }
 `
 

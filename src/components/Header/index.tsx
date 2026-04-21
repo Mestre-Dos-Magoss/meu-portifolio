@@ -4,7 +4,9 @@ import lua from '../../assets/lua.svg'
 const Header = () => (
   <S.HeaderBar>
     <S.Header className="container">
-      <h1>&lt; Juliano F / &gt;</h1>
+      <h1>
+        <span>&lt;</span> Juliano Dev<span> / &gt;</span>
+      </h1>
       <nav>
         <ul>
           <li>

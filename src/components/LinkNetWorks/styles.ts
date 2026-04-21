@@ -12,7 +12,7 @@ export const LinkContacts = styled.a`
   background-color: #fff;
   transition: all ease 0.3s;
 
-  svg {
+  img{
     width: 20px;
     height: 20px;
   }
