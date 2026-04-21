@@ -8,7 +8,7 @@ import github from '../../assets/github.svg'
 import linkedin from '../../assets/linkedin.svg'
 
 const Presentation = () => (
-  <SectionAbout color="secundario">
+  <SectionAbout color="secundario" className='container'>
     <InitialPresentation>
       <Span>Desenvolvedor Full Stack</Span>
       <h2>

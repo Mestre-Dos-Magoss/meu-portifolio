@@ -54,4 +54,3 @@ export const ButtonThema = styled.button`
       brightness(99%) contrast(91%);
   }
 `
-//#fafafa

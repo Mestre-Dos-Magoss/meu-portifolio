@@ -1,4 +1,5 @@
 import About from './components/About'
+import Communication from './components/Communication'
 import Header from './components/Header'
 import Porfolio from './components/Portfolio'
 import Presentation from './components/Presentation'
@@ -16,6 +17,7 @@ function App() {
       <Specialties />
       <Stacks />
       <Porfolio />
+      <Communication />
     </>
   )
 }

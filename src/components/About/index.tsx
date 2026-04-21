@@ -7,7 +7,7 @@ import padlock from '../../assets/cadeado.svg'
 import email from '../../assets/email.svg'
 
 const About = () => (
-  <SectionAbout color="principal" className="paddingTopBottom">
+  <SectionAbout color="principal" className="paddingTopBottom container">
     <InitialPresentation>
       <img
         src="https://img.freepik.com/fotos-gratis/programador-de-smiley-de-tiro-medio-dentro-de-casa_23-2149101154.jpg?semt=ais_hybrid&w=740&q=80"

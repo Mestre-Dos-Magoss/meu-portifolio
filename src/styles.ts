@@ -49,7 +49,7 @@ export const InitialPresentation = styled.div`
   }
 
   > img {
-    width: 584px;
+    max-width: 108%;
     height: 390px;
     border-radius: 12px;
     margin-top: 80px;
