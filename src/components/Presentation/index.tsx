@@ -38,12 +38,14 @@ const Presentation = () => (
       </div>
       <div>
         <LinkNetWorks
+          color="principal"
           name="Github"
           description="Clique aqui para acessar o meu repositório no GitHub"
           image={github}
           link="#"
         />
         <LinkNetWorks
+          color="principal"
           name="LinkedIn"
           description="Clique aqui para acessar o meu perfil no LinkedIn"
           image={linkedin}

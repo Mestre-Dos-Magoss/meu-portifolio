@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakPoints } from '../../styles'
 
 export const HeaderBar = styled.div`
   position: sticky;
@@ -16,13 +17,17 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
   height: 80px;
   padding-bottom: 16px;
   padding-top: 16px;
 
   ul {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 1.8em;
+    row-gap: 0.75em;
   }
 
   a {
@@ -30,12 +35,63 @@ export const Header = styled.header`
     color: black;
     font-size: 16px;
   }
+
   h1 {
     font-size: 24px;
     color: #6f7dea;
 
     span {
       color: #8d96d5;
+    }
+  }
+
+  @media (max-width: ${breakPoints.tablet}) {
+    height: auto;
+
+    nav {
+      display: none;
+    }
+  }
+
+  @media (max-width: ${breakPoints.celular}) {
+    h1 {
+      font-size: 20px;
+    }
+
+    a {
+      font-size: 14px;
+    }
+  }
+`
+
+export const NavRow = styled.nav`
+  display: none;
+
+  @media (max-width: ${breakPoints.tablet}) {
+    display: block;
+    margin: 0 auto;
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2em;
+      justify-content: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: ${breakPoints.celular}) {
+    ul {
+      gap: 0.75em;
+    }
+
+    a {
+      font-size: 14px;
     }
   }
 `

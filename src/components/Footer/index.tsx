@@ -33,7 +33,7 @@ const Footer = () => {
           <h4>Conecte-se</h4>
           <ul>
             <li>
-              <LinkNetWorks
+              <LinkNetWorks color='secundaria'
                 name="Github"
                 description="Clique aqui para acessar o meu repositório no GitHub"
                 image={github}
@@ -41,7 +41,7 @@ const Footer = () => {
               />
             </li>
             <li>
-              <LinkNetWorks
+              <LinkNetWorks color='secundaria'
                 name="LinkedIn"
                 description="Clique aqui para acessar o meu perfil no LinkedIn"
                 image={linkedin}
@@ -49,7 +49,7 @@ const Footer = () => {
               />
             </li>
             <li>
-              <LinkNetWorks
+              <LinkNetWorks color='secundaria'
                 name="Email"
                 description="Clique aqui para me enviar uma mensagem via email"
                 image={email}

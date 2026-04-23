@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { BotaoLink } from '../Buttons/styles'
+import { breakPoints } from '../../styles'
 
 export const CardProjectContainer = styled.div`
   display: block;
@@ -49,6 +50,15 @@ export const descriptionProject = styled.div`
     font-weight: 600;
     margin-bottom: 8px;
   }
+
+  @media (max-width: ${breakPoints.tablet}) {
+    padding: 20px;
+
+    div {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  }
 `
 
 export const ListTechnologysCard = styled.ul`
@@ -56,6 +66,8 @@ export const ListTechnologysCard = styled.ul`
   align-items: center;
   column-gap: 8px;
   margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 8px;
 
   li {
     display: block;

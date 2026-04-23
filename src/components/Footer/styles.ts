@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { LinkContacts } from '../LinkNetWorks/styles'
+import { breakPoints } from '../../styles'
 
 export const FooterFull = styled.div`
   display: block;
@@ -14,6 +15,7 @@ export const FooterContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 2em;
+  padding-bottom: 32px;
 
   h2 {
     color: #7e8eff;
@@ -57,6 +59,24 @@ export const FooterContainer = styled.div`
       width: 18px;
     }
   }
+
+    @media (max-width: ${breakPoints.tablet}){
+      display: block;
+
+      div {
+        margin-bottom: 32px;
+      }
+    }
+
+    @media (max-width: ${breakPoints.celular}){
+      div:last-child ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.75em;
+      }
+
+      text-align: center;
+    }
 `
 
 export const Gracias = styled.div`

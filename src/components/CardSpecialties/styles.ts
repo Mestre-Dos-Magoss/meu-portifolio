@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakPoints } from '../../styles'
 
 type Props = {
   color: string
@@ -10,13 +11,29 @@ export const Card = styled.div`
   border-radius: 16px;
 
   h4 {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 12px;
   }
 
   p,
   h4 {
     text-align: start;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  @media (max-width: ${breakPoints.tablet}) {
+    padding: 24px;
+
+    h4 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 18px;
+    }
   }
 `
 

@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Botao } from '../Buttons/styles'
+import { breakPoints } from '../../styles'
 
 export const CommunicationChannel = styled.div`
   display: block;
@@ -22,6 +23,18 @@ export const ListNetwork = styled.ul`
   display: flex;
   justify-content: flex-start;
   column-gap: 1.6em;
+  flex-wrap: wrap;
+
+    @media (max-width: ${breakPoints.tablet}){
+      justify-content: center;
+      margin: 32px 0;
+      gap: 1.6em;
+    }
+
+    @media (max-width: ${breakPoints.celular}){
+      justify-content: center;
+      gap: 1rem;
+    }
 `
 
 export const NetWorkChannels = styled.a`
