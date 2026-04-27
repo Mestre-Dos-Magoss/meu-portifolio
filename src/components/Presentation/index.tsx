@@ -1,7 +1,7 @@
 import Span from '../Span'
 import Button from '../Buttons'
 import SectionAbout from '../SectionAbout'
-import { InitialPresentation } from '../../styles'
+import { InitialPresentation } from '../../styles/styles'
 
 import github from '../../assets/github.svg'
 import linkedin from '../../assets/linkedin.svg'

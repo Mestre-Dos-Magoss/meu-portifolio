@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <S.FooterFull>
-      <S.FooterContainer>
+      <S.FooterContainer className="container">
         <div>
           <h2>
             <span>&lt;</span>Juliano Dev<span> / &gt;</span>
@@ -33,7 +33,8 @@ const Footer = () => {
           <h4>Conecte-se</h4>
           <ul>
             <li>
-              <LinkNetWorks color='secundaria'
+              <LinkNetWorks
+                color="secundaria"
                 name="Github"
                 description="Clique aqui para acessar o meu repositório no GitHub"
                 image={github}
@@ -41,7 +42,8 @@ const Footer = () => {
               />
             </li>
             <li>
-              <LinkNetWorks color='secundaria'
+              <LinkNetWorks
+                color="secundaria"
                 name="LinkedIn"
                 description="Clique aqui para acessar o meu perfil no LinkedIn"
                 image={linkedin}
@@ -49,7 +51,8 @@ const Footer = () => {
               />
             </li>
             <li>
-              <LinkNetWorks color='secundaria'
+              <LinkNetWorks
+                color="secundaria"
                 name="Email"
                 description="Clique aqui para me enviar uma mensagem via email"
                 image={email}

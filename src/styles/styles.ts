@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import type { Theme } from './Themes/light'
 
 export const breakPoints = {
   celular: '425px',
@@ -57,11 +58,10 @@ export const InitialPresentation = styled.div`
 
   h2 {
     font-size: 72px;
-    color: #000;
+    color: ${(props) => (props.theme as Theme).button.secundaria};
     margin-bottom: 16px;
 
     span {
-      color: #6366f1;
       background-clip: text;
       background-image: linear-gradient(85deg, #6366f1, #babfff);
       -webkit-text-fill-color: transparent;
@@ -71,9 +71,8 @@ export const InitialPresentation = styled.div`
   > img {
     width: 100%;
     max-width: 100%;
-    height: auto;
+    height: 390px;
     border-radius: 12px;
-    margin-top: 80px;
     display: block;
   }
 
@@ -130,53 +129,3 @@ export const InitialPresentation = styled.div`
     }
   }
 `
-
-
-// export const InitialPresentation = styled.div`
-//   width:100%;
-//   max-width:512px;
-
-//   h2{
-//     font-size:72px;
-//     line-height:1.1;
-//     margin-bottom:16px;
-//   }
-
-//   > img{
-//     width:100%;
-//     max-width:100%;
-//     height:auto;
-//     border-radius:12px;
-//     margin-top:40px;
-//     display:block;
-//   }
-
-//   p{
-//     font-size:20px;
-//     line-height:1.6;
-//     margin-bottom:32px;
-//   }
-
-//   .buttons{
-//     display:flex;
-//     gap:16px;
-//     flex-wrap:wrap;
-//   }
-
-//   @media(max-width:768px){
-
-//     max-width:100%;
-
-//     h2{
-//       font-size:48px;
-//     }
-
-//     p{
-//       max-width:100%;
-//     }
-
-//     .buttons{
-//       flex-direction:column;
-//     }
-//   }
-// `;

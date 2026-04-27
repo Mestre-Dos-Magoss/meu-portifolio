@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 import { BotaoLink } from '../Buttons/styles'
-import { breakPoints } from '../../styles'
+import { breakPoints } from '../../styles/styles'
+import type { Theme } from '../../styles/Themes/light'
 
 export const CardProjectContainer = styled.div`
   display: block;
   height: 100%;
-  border: 1px solid #e2e8f0;
+  border: 1px solid ${(props) => (props.theme as Theme).border};
   border-radius: 12px;
-  background-color: #fff;
+  background-color: ${(props) => (props.theme as Theme).section.principal};
   text-align: start;
   line-height: 26px;
 
@@ -31,7 +32,7 @@ export const descriptionProject = styled.div`
     font-size: 16px;
     font-weight: Normal;
     margin-bottom: 16px;
-    color: #64748b;
+    color: ${(props) => (props.theme as Theme).text};
   }
 
   div {
@@ -75,8 +76,8 @@ export const ListTechnologysCard = styled.ul`
     padding: 0 16px;
     font-size: 12px;
     font-weight: 600;
-    background-color: #f1f5f9;
-    color: #6366f1;
+    background-color: ${(props) => (props.theme as Theme).section.secundaria};
+    color: ${(props) => (props.theme as Theme).button.secundaria};
   }
 `
 
@@ -88,12 +89,12 @@ export const ListFeatures = styled.ul`
     align-items: center;
 
     li {
-      color: #64748b;
+      color: ${(props) => (props.theme as Theme).text};
       font-size: 14px;
     }
 
     span {
-      background-color: #6366f1;
+      background-color: ${(props) => (props.theme as Theme).button.secundaria};
       display: block;
       width: 6px;
       height: 6px;

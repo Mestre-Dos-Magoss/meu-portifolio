@@ -1,5 +1,5 @@
 import SectionAbout from '../SectionAbout'
-import { InitialPresentation } from '../../styles'
+import { InitialPresentation } from '../../styles/styles'
 import Button from '../Buttons'
 import Span from '../Span'
 

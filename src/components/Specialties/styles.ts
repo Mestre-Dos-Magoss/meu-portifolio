@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakPoints } from '../../styles'
+import { breakPoints } from '../../styles/styles'
 import { Card } from '../CardSpecialties/styles'
 
 export const Cardsgrid = styled.div`
@@ -8,7 +8,7 @@ export const Cardsgrid = styled.div`
   column-gap: 2em;
   row-gap: 2em;
 
-  @media (max-width: ${breakPoints.tablet}){
+  @media (max-width: ${breakPoints.tablet}) {
     grid-template-columns: 1fr;
     width: 100%;
 
@@ -17,7 +17,7 @@ export const Cardsgrid = styled.div`
     }
   }
 
-  @media (max-width: ${breakPoints.celular}){
+  @media (max-width: ${breakPoints.celular}) {
     grid-template-columns: 1fr;
     gap: 1.5em;
   }

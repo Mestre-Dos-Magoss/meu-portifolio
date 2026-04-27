@@ -1,20 +1,22 @@
 import styled from 'styled-components'
+import type { Theme } from '../../styles/Themes/light'
 
 export const CardStack = styled.div`
   padding: 24px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid ${(props) => (props.theme as Theme).border};
   border-radius: 12px;
-  background-color: #fff;
+  background-color: ${(props) => (props.theme as Theme).section.principal};
 
   h5 {
     font-size: 24px;
     margin-bottom: 8px;
     text-align: center;
+    color: ${(props) => (props.theme as Theme).title};
   }
 
   p {
     text-align: center;
     font-size: 14px;
-    color: #000;
+    color: ${(props) => (props.theme as Theme).text};
   }
 `

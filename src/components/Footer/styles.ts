@@ -1,14 +1,15 @@
 import styled from 'styled-components'
 import { LinkContacts } from '../LinkNetWorks/styles'
-import { breakPoints } from '../../styles'
+import { breakPoints } from '../../styles/styles'
+import type { Theme } from '../../styles/Themes/light'
 
 export const FooterFull = styled.div`
   display: block;
   width: 100%;
   padding: 48px 32px;
   padding-bottom: 32px;
-  background-color: #fafafa;
-  border-top: 1px solid #e2e8f0;
+  background-color: ${(props) => (props.theme as Theme).section.principal};
+  border-top: 1px solid ${(props) => (props.theme as Theme).border};
 `
 
 export const FooterContainer = styled.div`
@@ -18,11 +19,11 @@ export const FooterContainer = styled.div`
   padding-bottom: 32px;
 
   h2 {
-    color: #7e8eff;
+    color: ${(props) => (props.theme as Theme).blueTitle};
     margin-bottom: 16px;
 
     span {
-      color: #8d96d5;
+      color: ${(props) => (props.theme as Theme).bluishPurpleTitle};
     }
   }
 
@@ -30,21 +31,22 @@ export const FooterContainer = styled.div`
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 16px;
+    color: ${(props) => (props.theme as Theme).title};
   }
 
   p {
     font-size: 16px;
-    color: #64748b;
+    color: ${(props) => (props.theme as Theme).text};
   }
 
   li {
     font-size: 16px;
     margin-bottom: 8px;
-    color: #64748b;
+    color: ${(props) => (props.theme as Theme).text};
   }
 
   div:last-child {
-    ul{
+    ul {
       display: flex;
       column-gap: 8px;
     }
@@ -60,29 +62,29 @@ export const FooterContainer = styled.div`
     }
   }
 
-    @media (max-width: ${breakPoints.tablet}){
-      display: block;
+  @media (max-width: ${breakPoints.tablet}) {
+    display: block;
 
-      div {
-        margin-bottom: 32px;
-      }
+    div {
+      margin-bottom: 32px;
+    }
+  }
+
+  @media (max-width: ${breakPoints.celular}) {
+    div:last-child ul {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75em;
     }
 
-    @media (max-width: ${breakPoints.celular}){
-      div:last-child ul {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 0.75em;
-      }
-
-      text-align: center;
-    }
+    text-align: center;
+  }
 `
 
 export const Gracias = styled.div`
   display: block;
   padding-top: 32px;
   text-align: center;
-  border-top: 1px solid #e2e8f0;
-  color: #64748b;
+  border-top: 1px solid ${(props) => (props.theme as Theme).border};
+  color: ${(props) => (props.theme as Theme).text};
 `

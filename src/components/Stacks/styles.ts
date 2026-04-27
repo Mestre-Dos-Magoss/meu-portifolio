@@ -1,10 +1,9 @@
 import styled from 'styled-components'
-import { breakPoints } from '../../styles'
+import { breakPoints } from '../../styles/styles'
 
 export const StackContainer = styled.div`
   display: block;
   text-align: center;
-  background-color: #fff;
 `
 
 export const ListaStack = styled.ul`
@@ -13,12 +12,12 @@ export const ListaStack = styled.ul`
   row-gap: 2em;
   column-gap: 2em;
 
-  @media (max-width: ${breakPoints.tablet}){
+  @media (max-width: ${breakPoints.tablet}) {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
   }
 
-  @media (max-width: ${breakPoints.celular}){
+  @media (max-width: ${breakPoints.celular}) {
     grid-template-columns: 1fr;
     width: 100%;
   }

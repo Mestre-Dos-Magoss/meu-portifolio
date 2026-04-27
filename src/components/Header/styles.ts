@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { breakPoints } from '../../styles'
+import { breakPoints } from '../../styles/styles'
+import type { Theme } from '../../styles/Themes/light'
 
 export const HeaderBar = styled.div`
   position: sticky;
@@ -7,10 +8,9 @@ export const HeaderBar = styled.div`
   top: 0;
   width: 100%;
   z-index: 1;
-  border: 1px solid #000;
-  background-color: #fff;
-  color: #000;
-  margin-bottom: 4px;
+  border-bottom: 1px solid ${(props) => (props.theme as Theme).border};
+  background-color: ${(props) => (props.theme as Theme).section.principal};
+  color: ${(props) => (props.theme as Theme).title};
 `
 
 export const Header = styled.header`
@@ -32,16 +32,16 @@ export const Header = styled.header`
 
   a {
     text-decoration: none;
-    color: black;
+    color: ${(props) => (props.theme as Theme).text};
     font-size: 16px;
   }
 
   h1 {
     font-size: 24px;
-    color: #6f7dea;
+    color: ${(props) => (props.theme as Theme).blueTitleHeader};
 
     span {
-      color: #8d96d5;
+      color: ${(props) => (props.theme as Theme).bluishPurpleTitle};
     }
   }
 
@@ -104,9 +104,8 @@ export const ButtonThema = styled.button`
   height: 44px;
   padding: 12px;
   border-radius: 12px;
-  background-color: #e2e8f0;
-  border: #e2e8f0;
-  color: #6366f1;
+  background-color: ${(props) => (props.theme as Theme).section.secundaria};
+  border: 1px solid ${(props) => (props.theme as Theme).border};
 
   img {
     width: 20px;

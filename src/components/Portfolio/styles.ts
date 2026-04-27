@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakPoints } from '../../styles'
+import { breakPoints } from '../../styles/styles'
 import { CardProjectContainer } from '../CardProjects/styles'
 
 export const ListProjects = styled.ul`
@@ -8,7 +8,7 @@ export const ListProjects = styled.ul`
   column-gap: 2em;
   row-gap: 3em;
 
-  @media (max-width: ${breakPoints.tablet}){
+  @media (max-width: ${breakPoints.tablet}) {
     display: grid;
     grid-template-columns: 1fr;
     width: 100%;
@@ -19,7 +19,7 @@ export const ListProjects = styled.ul`
     }
   }
 
-  @media (max-width: ${breakPoints.celular}){
+  @media (max-width: ${breakPoints.celular}) {
     grid-template-columns: 1fr;
   }
 `

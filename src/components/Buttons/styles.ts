@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import type { Theme } from '../../styles/Themes/light'
 
 type Props = {
   padding?: string
@@ -12,11 +13,19 @@ export const Botao = styled.button<Props>`
   padding: ${(props) => props.padding || '12px 16px'};
   font-size: 16px;
   border: 2px solid
-    ${(props) => (props.color === 'principal' ? '#e2e8f0' : '#6366f1')};
+    ${(props) =>
+      props.color === 'principal'
+        ? (props.theme as Theme).border
+        : (props.theme as Theme).button.secundaria};
   border-radius: 12px;
   background-color: ${(props) =>
-    props.color === 'principal' ? '#fff' : '#6366f1'};
-  color: ${(props) => (props.color === 'principal' ? '#000' : '#fff')};
+    props.color === 'principal'
+      ? (props.theme as Theme).button.principal
+      : (props.theme as Theme).button.secundaria};
+  color: ${(props) =>
+    props.color === 'principal'
+      ? (props.theme as Theme).title
+      : (props.theme as Theme).title};
 
   img {
     margin-right: 8px;
@@ -31,13 +40,21 @@ export const BotaoLink = styled.a<Props>`
   align-items: center;
   padding: ${(props) => props.padding || '12px 16px'};
   font-size: 16px;
-  text-decoration: none;
   border: 2px solid
-    ${(props) => (props.color === 'principal' ? '#e2e8f0' : '#6366f1')};
+    ${(props) =>
+      props.color === 'principal'
+        ? (props.theme as Theme).border
+        : (props.theme as Theme).button.secundaria};
   border-radius: 12px;
   background-color: ${(props) =>
-    props.color === 'principal' ? '#fff' : '#6366f1'};
-  color: ${(props) => (props.color === 'principal' ? '#000' : '#fff')};
+    props.color === 'principal'
+      ? (props.theme as Theme).button.principal
+      : (props.theme as Theme).button.secundaria};
+  color: ${(props) =>
+    props.color === 'principal'
+      ? (props.theme as Theme).title
+      : (props.theme as Theme).title};
+  text-decoration: none;
 
   img {
     margin-right: 8px;

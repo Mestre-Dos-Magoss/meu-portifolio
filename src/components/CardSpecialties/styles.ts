@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { breakPoints } from '../../styles'
+import { breakPoints } from '../../styles/styles'
+import type { Theme } from '../../styles/Themes/light'
 
 type Props = {
   color: string
@@ -7,12 +8,14 @@ type Props = {
 
 export const Card = styled.div`
   padding: 32px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid ${(props) => (props.theme as Theme).border};
   border-radius: 16px;
+  background-color: ${(props) => (props.theme as Theme).section.principal};
 
   h4 {
     font-size: 28px;
     margin-bottom: 12px;
+    color: ${(props) => (props.theme as Theme).title};
   }
 
   p,
@@ -22,6 +25,7 @@ export const Card = styled.div`
 
   p {
     font-size: 20px;
+    color: ${(props) => (props.theme as Theme).text};
   }
 
   @media (max-width: ${breakPoints.tablet}) {

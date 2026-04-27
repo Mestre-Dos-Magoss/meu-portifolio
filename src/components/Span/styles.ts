@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import type { Theme } from '../../styles/Themes/light'
 
 export const SpanPersonality = styled.span`
   display: block;
@@ -6,5 +7,5 @@ export const SpanPersonality = styled.span`
   letter-spacing: 2px;
   font-size: 16px;
   margin-bottom: 16px;
-  color: #6366f1;
+  color: ${(props) => (props.theme as Theme).button.secundaria};
 `

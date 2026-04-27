@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Botao } from '../Buttons/styles'
-import { breakPoints } from '../../styles'
+import { breakPoints } from '../../styles/styles'
+import type { Theme } from '../../styles/Themes/light'
 
 export const CommunicationChannel = styled.div`
   display: block;
@@ -15,7 +16,7 @@ export const CommunicationChannel = styled.div`
   p {
     margin-bottom: 32px;
     font-size: 16px;
-    color: #64748b;
+    color: ${(props) => (props.theme as Theme).text};
   }
 `
 
@@ -25,53 +26,53 @@ export const ListNetwork = styled.ul`
   column-gap: 1.6em;
   flex-wrap: wrap;
 
-    @media (max-width: ${breakPoints.tablet}){
-      justify-content: center;
-      margin: 32px 0;
-      gap: 1.6em;
-    }
+  @media (max-width: ${breakPoints.tablet}) {
+    justify-content: center;
+    margin: 32px 0;
+    gap: 1.6em;
+  }
 
-    @media (max-width: ${breakPoints.celular}){
-      justify-content: center;
-      gap: 1rem;
-    }
+  @media (max-width: ${breakPoints.celular}) {
+    justify-content: center;
+    gap: 1rem;
+  }
 `
 
 export const NetWorkChannels = styled.a`
-    padding: 24px;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    background-color: #fff;
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+  padding: 24px;
+  border: 1px solid ${(props) => (props.theme as Theme).border};
+  border-radius: 12px;
+  background-color: ${(props) => (props.theme as Theme).section.principal};
+  color: ${(props) => (props.theme as Theme).title};
+  text-decoration: none;
+  cursor: pointer;
 
-    &:hover {
-        border:1px solid #6366f1;
-    }
-    
-    div {
-        display: flex; 
-        align-items: center;
-        justify-content: center; 
-        height: 56px;
-        width: 56px;
-        margin-bottom: 16px;
-        border: none;
-        border-radius: 50%;
-        background-color: #6255f143;
-    }
-    
-    img {
-        width: 28px;
-        height: 28px;
-    }
-    
-    span {
-        display: block;
-        font-weight: 600;
-        font-size: 16px;
-    }
+  &:hover {
+    border: 1px solid ${(props) => (props.theme as Theme).button.secundaria};
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+    width: 56px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 50%;
+    background-color: #6255f143;
+  }
+
+  img {
+    width: 28px;
+    height: 28px;
+  }
+
+  span {
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+  }
 `
 
 export const Form = styled.form`
@@ -102,11 +103,11 @@ export const InputField = styled.div`
     width: 100%;
     padding: 12px 16px;
     font-size: 16px;
-    outline-color: #6366f1;
-    border: 1px solid #e2e8f0;
+    outline-color: ${(props) => (props.theme as Theme).button.secundaria};
+    border: 1px solid ${(props) => (props.theme as Theme).border};
     border-radius: 12px;
-    background-color: #fff;
-    color: #000;
+    background-color: ${(props) => (props.theme as Theme).section.principal};
+    color: ${(props) => (props.theme as Theme).title};
   }
 
   textarea {

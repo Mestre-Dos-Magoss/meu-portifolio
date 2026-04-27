@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import type { Theme } from '../../styles/Themes/light'
 
 type Props = {
-  color: 'principal' | 'secundaria';
+  color: 'principal' | 'secundaria'
 }
 
 export const LinkContacts = styled.a<Props>`
@@ -11,12 +12,13 @@ export const LinkContacts = styled.a<Props>`
   width: 46px;
   height: 46px;
   padding: 12px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid ${(props) => (props.theme as Theme).border};
   border-radius: 50%;
-  background-color: ${props => props.color === 'principal' ? '#fff' : '#f1f5f9'};
+  background-color: ${(props) =>
+    props.color === 'principal' ? 'transparent' : '#f1f5f9'};
   transition: all ease 0.3s;
 
-  img{
+  img {
     width: 20px;
     height: 20px;
   }
@@ -24,7 +26,8 @@ export const LinkContacts = styled.a<Props>`
   &:hover {
     width: 50px;
     height: 50px;
-    background-color: #e2e8f0;
+    background-color: ${(props) => (props.theme as Theme).button.secundaria};
+    border-color: ${(props) => (props.theme as Theme).button.secundaria};
     transition: all ease 0.3s;
   }
 `

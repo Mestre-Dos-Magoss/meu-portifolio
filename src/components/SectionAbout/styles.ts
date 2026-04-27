@@ -1,12 +1,16 @@
 import styled from 'styled-components'
 import type { Props } from '.'
 import { Botao } from '../Buttons/styles'
-import { breakPoints } from '../../styles'
+import { breakPoints } from '../../styles/styles'
+import type { Theme } from '../../styles/Themes/light'
 
 export const Presentation = styled.div<Omit<Props, 'className' | 'children'>>`
   display: block;
   background-color: ${(props) =>
-    props.color === 'principal' ? '#fff' : '#fafafa'};
+    props.color === 'principal'
+      ? (props.theme as Theme).button.principal
+      : (props.theme as Theme).section.principal};
+  padding-top: 4px;
 `
 export const PresentationContainer = styled.div`
   display: grid;
