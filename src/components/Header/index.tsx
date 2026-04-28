@@ -4,7 +4,7 @@ import sol from '../../assets/sol.svg'
 import { useState } from 'react'
 
 type Props = {
-  toggleTheme: () => boolean
+  toggleTheme: () => void
 }
 
 const Header = ({ toggleTheme }: Props) => {
@@ -28,19 +28,19 @@ const Header = ({ toggleTheme }: Props) => {
           <nav>
             <ul>
               <li>
-                <a href="">Início</a>
+                <a href="#home">Início</a>
               </li>
               <li>
-                <a href="">Sobre</a>
+                <a href="#about">Sobre</a>
               </li>
               <li>
-                <a href="">Habilidades</a>
+                <a href="#specialties">Habilidades</a>
               </li>
               <li>
-                <a href="">Projetos</a>
+                <a href="#projects">Projetos</a>
               </li>
               <li>
-                <a href="">Contato</a>
+                <a href="#contact">Contato</a>
               </li>
             </ul>
           </nav>
@@ -62,19 +62,19 @@ const Header = ({ toggleTheme }: Props) => {
         <S.NavRow>
           <ul>
             <li>
-              <a href="">Início</a>
+              <a href="#home">Início</a>
             </li>
             <li>
-              <a href="">Sobre</a>
+              <a href="#about">Sobre</a>
             </li>
             <li>
-              <a href="">Habilidades</a>
+              <a href="#specialties">Habilidades</a>
             </li>
             <li>
-              <a href="">Projetos</a>
+              <a href="#projects">Projetos</a>
             </li>
             <li>
-              <a href="">Contato</a>
+              <a href="#contact">Contato</a>
             </li>
           </ul>
         </S.NavRow>

@@ -1,4 +1,4 @@
-import {LinkContacts} from './styles'
+import { LinkContacts } from './styles'
 
 type Props = {
   name: string
@@ -9,7 +9,7 @@ type Props = {
 }
 
 const LinkNetWorks = ({ image, link, description, name, color }: Props) => (
-  <LinkContacts href={link} title={description} color={color}>
+  <LinkContacts href={link} title={description} color={color} target="_blank">
     <img src={image} alt={name} />
   </LinkContacts>
 )

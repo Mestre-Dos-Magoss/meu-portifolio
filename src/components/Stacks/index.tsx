@@ -44,6 +44,7 @@ const Stacks = () => (
     title="Tecnologias que Domino"
     text="Ferramentas e tecnologias que utilizo no dia a dia para criar soluções
         robustas e escaláveis"
+    id="stack"
   >
     <S.ListaStack>
       {StackTeste.map((stack) => (

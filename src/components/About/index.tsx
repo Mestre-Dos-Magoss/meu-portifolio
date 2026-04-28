@@ -6,8 +6,14 @@ import Span from '../Span'
 import padlock from '../../assets/cadeado.svg'
 import email from '../../assets/email.svg'
 
+import { redirectUserToPage } from '../../utils'
+
 const About = () => (
-  <SectionAbout color="principal" className="paddingTopBottom container">
+  <SectionAbout
+    color="principal"
+    className="paddingTopBottom container"
+    id="about"
+  >
     <InitialPresentation>
       <img
         src="https://img.freepik.com/fotos-gratis/programador-de-smiley-de-tiro-medio-dentro-de-casa_23-2149101154.jpg?semt=ais_hybrid&w=740&q=80"
@@ -38,6 +44,7 @@ const About = () => (
           color="secundario"
           type="button"
           title="Clique aqui para entrar em contato comigo"
+          action={() => redirectUserToPage('#contact')}
         >
           <img src={email} alt="" />
           Entrar em Contato
@@ -46,6 +53,7 @@ const About = () => (
           color="principal"
           type="button"
           title="Clique aqui para ver os meus projetos no GitHub"
+          action={() => redirectUserToPage('#projects')}
         >
           <img src={padlock} alt="" />
           Ver Projetos

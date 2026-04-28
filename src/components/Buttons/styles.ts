@@ -26,6 +26,7 @@ export const Botao = styled.button<Props>`
     props.color === 'principal'
       ? (props.theme as Theme).title
       : (props.theme as Theme).title};
+  cursor: pointer;
 
   img {
     margin-right: 8px;

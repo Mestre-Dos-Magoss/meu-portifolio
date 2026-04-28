@@ -38,6 +38,7 @@ const Specialties = () => (
     color="principal"
     subTitle="Habilidades"
     title="Áreas de Especialização"
+    id="specialties"
   >
     <S.Cardsgrid>
       {Especialidades.map((stack) => (

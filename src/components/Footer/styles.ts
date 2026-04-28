@@ -42,7 +42,15 @@ export const FooterContainer = styled.div`
   li {
     font-size: 16px;
     margin-bottom: 8px;
-    color: ${(props) => (props.theme as Theme).text};
+
+    a {
+      color: ${(props) => (props.theme as Theme).text};
+      text-decoration: none;
+
+      &:hover {
+        color: ${(props) => (props.theme as Theme).blueTitle};
+      }
+    }
   }
 
   div:last-child {

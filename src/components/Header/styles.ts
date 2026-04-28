@@ -34,6 +34,10 @@ export const Header = styled.header`
     text-decoration: none;
     color: ${(props) => (props.theme as Theme).text};
     font-size: 16px;
+
+    &:hover {
+      color: ${(props) => (props.theme as Theme).blueTitle};
+    }
   }
 
   h1 {
@@ -82,6 +86,10 @@ export const NavRow = styled.nav`
       text-decoration: none;
       color: black;
       font-size: 16px;
+
+      &:hover {
+        color: ${(props) => (props.theme as Theme).blueTitle};
+      }
     }
   }
 

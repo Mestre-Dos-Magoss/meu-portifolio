@@ -4,10 +4,11 @@ export type Props = {
   children: React.ReactNode
   className?: string
   color: 'principal' | 'secundario'
+  id?: string
 }
 
-const SectionAbout = ({ children, className, color }: Props) => (
-  <S.Presentation color={color}>
+const SectionAbout = ({ children, className, color, id }: Props) => (
+  <S.Presentation color={color} id={id}>
     <S.PresentationContainer className={className}>
       {children}
     </S.PresentationContainer>

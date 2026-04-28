@@ -26,6 +26,7 @@ export const descriptionProject = styled.div`
   h4 {
     font-size: 24px;
     margin-bottom: 16px;
+    color: ${(props) => (props.theme as Theme).title};
   }
 
   p {
@@ -68,7 +69,7 @@ export const ListTechnologysCard = styled.ul`
   column-gap: 8px;
   margin-bottom: 32px;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 
   li {
     display: block;

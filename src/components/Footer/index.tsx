@@ -23,10 +23,18 @@ const Footer = () => {
         <div>
           <h4>Links Rápidos</h4>
           <ul>
-            <li>Sobre</li>
-            <li>Habilidades</li>
-            <li>Projetos</li>
-            <li>Contatos</li>
+            <li>
+              <a href="#about">Sobre</a>
+            </li>
+            <li>
+              <a href="#specialties">Habilidades</a>
+            </li>
+            <li>
+              <a href="#projects">Projetos</a>
+            </li>
+            <li>
+              <a href="#contact">Contatos</a>
+            </li>
           </ul>
         </div>
         <div>
@@ -38,7 +46,7 @@ const Footer = () => {
                 name="Github"
                 description="Clique aqui para acessar o meu repositório no GitHub"
                 image={github}
-                link="#"
+                link="https://github.com/Mestre-Dos-Magoss"
               />
             </li>
             <li>
@@ -47,7 +55,7 @@ const Footer = () => {
                 name="LinkedIn"
                 description="Clique aqui para acessar o meu perfil no LinkedIn"
                 image={linkedin}
-                link="#"
+                link="https://linkedin.com/in/juliano-apolinário-devfullstack"
               />
             </li>
             <li>

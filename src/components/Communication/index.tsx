@@ -11,35 +11,45 @@ const Communication = () => (
     subTitle="contato"
     title="Vamos Trabalhar Juntos?"
     text="Estou sempre aberto a novos projetos e oportunidades. Entre em contato e vamos conversar sobre como posso ajudar!"
+    id="contact"
   >
-    <SectionAbout color="principal"> 
-        <S.CommunicationChannel>
-          <h3>Canais de Comunicação</h3>
-          <p>
-            Escolha a forma mais conveniente para você entrar em contato.
-            Respondo geralmente em até 24 horas.
-          </p>
+    <SectionAbout color="secundario">
+      <S.CommunicationChannel>
+        <h3>Canais de Comunicação</h3>
+        <p>
+          Escolha a forma mais conveniente para você entrar em contato. Respondo
+          geralmente em até 24 horas.
+        </p>
         <S.ListNetwork>
-          <S.NetWorkChannels href='#'>
-              <div>
-                <img src={linkedin} alt="" />
-              </div>
-              <span>Linkedin</span>
+          <S.NetWorkChannels
+            href="https://linkedin.com/in/juliano-apolinário-devfullstack"
+            target="_blank"
+          >
+            <div>
+              <img src={linkedin} alt="" />
+            </div>
+            <span>Linkedin</span>
           </S.NetWorkChannels>
-          <S.NetWorkChannels>
-              <div>
-                <img src={linkedin} alt="" />
-              </div>
-              <span>Linkedin</span>
+          <S.NetWorkChannels
+            href="https://linkedin.com/in/juliano-apolinário-devfullstack"
+            target="_blank"
+          >
+            <div>
+              <img src={linkedin} alt="" />
+            </div>
+            <span>Linkedin</span>
           </S.NetWorkChannels>
-          <S.NetWorkChannels>
-              <div>
-                <img src={linkedin} alt="" />
-              </div>
-              <span>Linkedin</span>
+          <S.NetWorkChannels
+            href="https://linkedin.com/in/juliano-apolinário-devfullstack"
+            target="_blank"
+          >
+            <div>
+              <img src={linkedin} alt="" />
+            </div>
+            <span>Linkedin</span>
           </S.NetWorkChannels>
         </S.ListNetwork>
-        </S.CommunicationChannel>
+      </S.CommunicationChannel>
       <S.Form>
         <S.InputField>
           <label htmlFor="nameMessenger">Nome</label>

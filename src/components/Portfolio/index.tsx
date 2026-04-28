@@ -1,104 +1,55 @@
 import CardProjects from '../CardProjects'
 import Section from '../Sections'
-
+import games_store from '../../assets/games_store.png'
+import efood from '../../assets/efood.png'
+import lista_tarefas from '../../assets/lista_tarefas.png'
 import { ListProjects } from './styles'
 
 const ProjectsTeste = [
   {
-    image:
-      'https://polijunior.com.br/wp-content/uploads/2023/01/desenvolver-projeto-web-300x200.jpg',
-    title: 'E-Commerce Platform',
+    image: games_store,
+    title: 'Games Store',
     description:
-      'Plataforma completa de e-commerce com pagamentos integrados e painel administrativo.',
+      'Plataforma de jogos completa com recursos avançados e design moderno, com uma experiência de compra personalizada.',
     features: [
-      'integração com Banco de dados',
+      'Integração com Banco de dados',
       'Componentização',
-      'envio dos dados',
-      'validações e cyberSecurança'
+      'Tratamento dos dados',
+      'Validações e autenticação'
     ],
-    technologys: ['React', 'typescript', 'Javascript', 'CSS'],
-    linkRepos: 'localHost',
-    linkView: 'LocalHost'
+    technologys: ['React', 'typescript', 'Express', 'PostgreSQL'],
+    linkRepos: 'https://github.com/Mestre-Dos-Magoss/loja_de_jogos.git',
+    linkView: 'https://loja-de-jogos-sigma.vercel.app'
   },
   {
-    image:
-      'https://polijunior.com.br/wp-content/uploads/2023/01/desenvolver-projeto-web-300x200.jpg',
-    title: 'Loja de games',
+    image: efood,
+    title: 'Efood',
+    description:
+      'Efood é um e-commerce de alimentos que oferece uma ampla variedade de opções gastronômicas no conforto da sua casa.',
+    features: [
+      'Integração com API Restful',
+      'Checkout e carrinho de compras',
+      'Recebimento e envio dos dados',
+      'Gerenciamento de estado com Redux'
+    ],
+    technologys: ['React', 'typescript', 'API Restful', 'Redux'],
+    linkRepos: 'https://github.com/Mestre-Dos-Magoss/Efood.git',
+    linkView: 'https://efood-iota-seven.vercel.app'
+  },
+  {
+    image: lista_tarefas,
+    title: 'Lista de tarefas',
     description:
       'Uma loja que foi criada para mudar completamente a maneira em que você joga, uma verdadeira experiência..',
     features: [
-      'integração com Banco de dados',
-      'Componentização',
-      'envio dos dados',
-      'validações e cyberSecurança'
+      'Gerenciador de tarefas',
+      'Cadastramento de tarefas',
+      'Filtragem e ordenação de tarefas',
+      'Definicão de prioridades e prazos'
     ],
-    technologys: ['React', 'typescript', 'Javascript', 'CSS'],
-    linkRepos: 'localHost',
-    linkView: 'LocalHost'
-  },
-  {
-    image:
-      'https://polijunior.com.br/wp-content/uploads/2023/01/desenvolver-projeto-web-300x200.jpg',
-    title: 'Loja de games',
-    description:
-      'Uma loja que foi criada para mudar completamente a maneira em que você joga, uma verdadeira experiência..',
-    features: [
-      'integração com Banco de dados',
-      'Componentização',
-      'envio dos dados',
-      'validações e cyberSecurança'
-    ],
-    technologys: ['React', 'typescript', 'Javascript', 'CSS'],
-    linkRepos: 'localHost',
-    linkView: 'LocalHost'
-  },
-  {
-    image:
-      'https://polijunior.com.br/wp-content/uploads/2023/01/desenvolver-projeto-web-300x200.jpg',
-    title: 'Loja de games',
-    description:
-      'Uma loja que foi criada para mudar completamente a maneira em que você joga, uma verdadeira experiência..',
-    features: [
-      'integração com Banco de dados',
-      'Componentização',
-      'envio dos dados',
-      'validações e cyberSecurança'
-    ],
-    technologys: ['React', 'typescript', 'Javascript', 'CSS'],
-    linkRepos: 'localHost',
-    linkView: 'LocalHost'
-  },
-  {
-    image:
-      'https://polijunior.com.br/wp-content/uploads/2023/01/desenvolver-projeto-web-300x200.jpg',
-    title: 'Loja de games',
-    description:
-      'Uma loja que foi criada para mudar completamente a maneira em que você joga, uma verdadeira experiência..',
-    features: [
-      'integração com Banco de dados',
-      'Componentização',
-      'envio dos dados',
-      'validações e cyberSecurança'
-    ],
-    technologys: ['React', 'typescript', 'Javascript', 'CSS'],
-    linkRepos: 'localHost',
-    linkView: 'LocalHost'
-  },
-  {
-    image:
-      'https://polijunior.com.br/wp-content/uploads/2023/01/desenvolver-projeto-web-300x200.jpg',
-    title: 'Loja de games',
-    description:
-      'Uma loja que foi criada para mudar completamente a maneira em que você joga, uma verdadeira experiência..',
-    features: [
-      'integração com Banco de dados',
-      'Componentização',
-      'envio dos dados',
-      'validações e cyberSecurança'
-    ],
-    technologys: ['React', 'typescript', 'Javascript', 'CSS'],
-    linkRepos: 'localHost',
-    linkView: 'LocalHost'
+    technologys: ['React', 'typescript', 'React Router'],
+    linkRepos: 'https://github.com/Mestre-Dos-Magoss/minhas-tarefas.git',
+    linkView: 'https://minhas-tarefas-xi-nine.vercel.app'
   }
 ]
 
@@ -108,6 +59,7 @@ const Porfolio = () => (
     title="Projetos em Destaque"
     subTitle="Portfólio"
     text="Alguns dos projetos que desenvolvi, desde MVPs até aplicações em produção atendendo milhares de usuários"
+    id="projects"
   >
     <ListProjects>
       {ProjectsTeste.map(
