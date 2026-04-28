@@ -23,7 +23,7 @@ const CardProjects = ({
   linkRepos,
   linkView
 }: Props) => (
-  <S.CardProjectContainer>
+  <S.CardProjectContainer title={`Project: ${title}`}>
     <img src={image} alt={`Imagem do projeto${title}`} />
     <S.descriptionProject>
       <h4>{title}</h4>

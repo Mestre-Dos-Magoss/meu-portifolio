@@ -2,34 +2,42 @@ import * as S from './styles'
 
 import type { Props } from '../CardSpecialties'
 
-import email from '../../assets/email.svg'
+import code from '../../assets/code.svg'
+import layers from '../../assets/layers.svg'
+import database from '../../assets/database.svg'
 import CardSpecialties from '../CardSpecialties'
 import Section from '../Sections'
 
 const Especialidades: Props[] = [
   {
     carrer: 'Frontend Development',
-    color: 'blue',
-    image: email,
-    technologies: ['react.js, ', 'redux, ', 'typescript, ', 'css, js, ']
+    color: '#00b8db',
+    image: code,
+    technologies: [
+      'React, ',
+      'Typescript, ',
+      'Redux, ',
+      'Tailwind CSS, ',
+      'JavaScript '
+    ]
   },
   {
-    carrer: 'Frontend Development',
-    color: 'blue',
-    image: email,
-    technologies: ['react.js, ', 'redux, ', 'typescript, ', 'css, js, ']
+    carrer: 'Backend Development',
+    color: '#f6339a',
+    image: database,
+    technologies: [
+      'Node.js, ',
+      'Express, ',
+      'MongoDB, ',
+      'PostgreSQL, ',
+      'Java '
+    ]
   },
   {
-    carrer: 'Frontend Development',
-    color: 'blue',
-    image: email,
-    technologies: ['react.js, ', 'redux, ', 'typescript, ', 'css, js, ']
-  },
-  {
-    carrer: 'Frontend Development',
-    color: 'blue',
-    image: email,
-    technologies: ['react.js, ', 'redux, ', 'typescript, ', 'css, js, ']
+    carrer: 'DevOps',
+    color: '#fb2c36',
+    image: layers,
+    technologies: ['Scrum, ', 'Kanban, ', 'CI/CD']
   }
 ]
 

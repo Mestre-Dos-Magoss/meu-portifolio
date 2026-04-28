@@ -32,7 +32,7 @@ export const Card = styled.div`
     padding: 24px;
 
     h4 {
-      font-size: 24px;
+      font-size: 18px;
     }
 
     p {

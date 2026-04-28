@@ -10,7 +10,7 @@ export type Props = {
 const CardSpecialties = ({ carrer, image, technologies, color }: Props) => (
   <S.Card>
     <S.LogoStack color={color}>
-      <img src={image} alt="" />
+      <img src={image} alt="Icone da especialidade" />
     </S.LogoStack>
     <h4>{carrer}</h4>
     <p>{technologies}</p>

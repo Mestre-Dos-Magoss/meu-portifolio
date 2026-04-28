@@ -9,7 +9,9 @@ const Light = {
   },
   svgColors: {
     principal:
-      'filter: brightness(0) saturate(100%) invert(100%) sepia(8%) saturate(7499%) hue-rotate(118deg) brightness(107%) contrast(99%);'
+      'brightness(0) saturate(100%) invert(99%) sepia(7%) saturate(550%) hue-rotate(239deg) brightness(114%) contrast(100%);',
+    secundaria:
+      'brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(267deg) brightness(88%) contrast(107%);'
   },
   title: '#000',
   text: '#64748b',
@@ -30,6 +32,7 @@ export type Theme = {
   }
   svgColors: {
     principal: string
+    secundaria?: string
   }
   title: string
   text: string

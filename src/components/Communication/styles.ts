@@ -11,6 +11,7 @@ export const CommunicationChannel = styled.div`
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 24px;
+    color: ${(props) => (props.theme as Theme).title};
   }
 
   p {
@@ -96,6 +97,7 @@ export const InputField = styled.div`
     font-weight: 600;
     margin-bottom: 8px;
     text-align: start;
+    color: ${(props) => (props.theme as Theme).title};
   }
 
   input,

@@ -9,7 +9,9 @@ const Dark = {
   },
   svgColors: {
     principal:
-      'filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(267deg) brightness(88%) contrast(107%);'
+      'brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(267deg) brightness(88%) contrast(107%);',
+    secundaria:
+      'brightness(0) saturate(100%) invert(99%) sepia(7%) saturate(550%) hue-rotate(239deg) brightness(114%) contrast(100%);'
   },
   title: '#fff',
   text: '#94a3b8',

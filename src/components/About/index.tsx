@@ -5,6 +5,7 @@ import Span from '../Span'
 
 import padlock from '../../assets/cadeado.svg'
 import email from '../../assets/email.svg'
+import presentation from '../../assets/presentation.jpg'
 
 import { redirectUserToPage } from '../../utils'
 
@@ -15,29 +16,23 @@ const About = () => (
     id="about"
   >
     <InitialPresentation>
-      <img
-        src="https://img.freepik.com/fotos-gratis/programador-de-smiley-de-tiro-medio-dentro-de-casa_23-2149101154.jpg?semt=ais_hybrid&w=740&q=80"
-        alt=""
-      />
+      <img src={presentation} alt="Juliano Dev trabalhando" />
     </InitialPresentation>
     <InitialPresentation>
       <Span>Sobre mim</Span>
-      <h3 className="h2">Juliano F Apolinário</h3>
+      <h3 className="h2">Juliano Dev</h3>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernaturis,
-        possimus consectetur facilis nostrum incidunt fugiat error!
+        Olá, eu sou Juliano, desenvolvedor de 21 anos apaixonado por tecnologia
+        e pelo poder da programação em transformar ideias em soluções reais. Meu
+        objetivo é criar experiências digitais modernas, funcionais e
+        visualmente marcantes, sempre alinhadas às melhores práticas de
+        desenvolvimento e à escrita de código limpo, eficiente e escalável.
       </p>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus dolorum
-        minima dolor ipsum rerum. Quo deserunt suscipit sit excepturi ullam
-        quisquam, reiciendis et dolor, vel voluptate natus quibusdam beatae
-        voluptas?
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus dolorum
-        minima dolor ipsum rerum. Quo deserunt suscipit sit excepturi ullam
-        quisquam, reiciendis et dolor, vel voluptate natus quibusdam beatae
-        voluptas?
+        Neste portfólio, apresento um pouco da minha trajetória, projetos e
+        habilidades, refletindo meu compromisso com qualidade, inovação e
+        evolução constante. Mais do que desenvolver sites, páginas e aplicações,
+        busco construir soluções que gerem valor, desempenho e resultados.
       </p>
       <div>
         <Button
@@ -46,7 +41,7 @@ const About = () => (
           title="Clique aqui para entrar em contato comigo"
           action={() => redirectUserToPage('#contact')}
         >
-          <img src={email} alt="" />
+          <img src={email} alt="Ícone de email" />
           Entrar em Contato
         </Button>
         <Button

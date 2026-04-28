@@ -51,6 +51,7 @@ export const descriptionProject = styled.div`
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 8px;
+    color: ${(props) => (props.theme as Theme).title};
   }
 
   @media (max-width: ${breakPoints.tablet}) {

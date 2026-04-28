@@ -6,6 +6,7 @@ import { InitialPresentation } from '../../styles/styles'
 import github from '../../assets/github.svg'
 import linkedin from '../../assets/linkedin.svg'
 import LinkNetWorks from '../LinkNetWorks'
+import programimg from '../../assets/programim.jpg'
 
 import { redirectUserToPage } from '../../utils'
 
@@ -59,10 +60,7 @@ const Presentation = () => {
         </div>
       </InitialPresentation>
       <InitialPresentation>
-        <img
-          src="https://uds.com.br/blog/wp-content/uploads/2023/05/Imagem-de-programador-trabalhando-em-desenvolvimento-de-software.jpg"
-          alt="Um programador em ação"
-        />
+        <img src={programimg} alt="Juliano Dev trabalhando" />
       </InitialPresentation>
     </SectionAbout>
   )

@@ -5,36 +5,50 @@ import * as S from './styles'
 const StackTeste = [
   {
     stack: ' React',
-    type: 'frameWork'
+    type: 'Front-end'
   },
   {
-    stack: ' React',
-    type: 'frameWork'
+    stack: ' Typescript',
+    type: 'Language-end'
   },
   {
-    stack: ' React',
-    type: 'frameWork'
+    stack: ' Node.js',
+    type: 'Back-end'
   },
   {
-    stack: ' React',
-    type: 'frameWork'
+    stack: ' PostgreSQL',
+    type: 'Database'
   },
   {
-    stack: ' React',
-    type: 'frameWork'
+    stack: 'Styled-Components',
+    type: 'Styling'
   },
   {
-    stack: ' React',
-    type: 'frameWork'
+    stack: 'Java',
+    type: 'Back-end'
   },
   {
-    stack: ' React',
-    type: 'frameWork'
+    stack: 'Jest',
+    type: 'Testing'
   },
   {
-    stack: ' React',
-    type: 'frameWork'
-  }
+    stack: 'Less',
+    type: 'Styling'
+  },
+  {
+    stack: 'Cypress',
+    type: 'Testing'
+  },
+  {
+    stack: 'Sass',
+    type: 'Styling'
+  },
+  { stack: 'MongoDB', type: 'Database' },
+  { stack: 'Express', type: 'Back-end' },
+  { stack: 'Redux', type: 'State Management' },
+  { stack: 'JavaScript', type: 'Language' },
+  { stack: 'IA', type: 'Intelligence Artificial' },
+  { stack: 'Tailwind CSS', type: 'Styling' }
 ]
 
 const Stacks = () => (

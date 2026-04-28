@@ -84,7 +84,7 @@ export const NavRow = styled.nav`
 
     a {
       text-decoration: none;
-      color: black;
+      color: ${(props) => (props.theme as Theme).text};
       font-size: 16px;
 
       &:hover {
@@ -100,6 +100,7 @@ export const NavRow = styled.nav`
 
     a {
       font-size: 14px;
+      color: ${(props) => (props.theme as Theme).text};
     }
   }
 `

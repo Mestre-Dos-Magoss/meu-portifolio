@@ -26,7 +26,7 @@ const Communication = () => (
             target="_blank"
           >
             <div>
-              <img src={linkedin} alt="" />
+              <img src={linkedin} alt="Logo do LinkedIn" />
             </div>
             <span>Linkedin</span>
           </S.NetWorkChannels>
@@ -35,7 +35,7 @@ const Communication = () => (
             target="_blank"
           >
             <div>
-              <img src={linkedin} alt="" />
+              <img src={linkedin} alt="Logo do LinkedIn" />
             </div>
             <span>Linkedin</span>
           </S.NetWorkChannels>
@@ -44,7 +44,7 @@ const Communication = () => (
             target="_blank"
           >
             <div>
-              <img src={linkedin} alt="" />
+              <img src={linkedin} alt="Logo do LinkedIn" />
             </div>
             <span>Linkedin</span>
           </S.NetWorkChannels>
@@ -76,7 +76,7 @@ const Communication = () => (
           title="Clique aqui para me enviar uma mensagem"
           type="submit"
         >
-          <img src={send} alt="" />
+          <img src={send} alt="Ícone de enviar mensagem" />
           Enviar Mensagem
         </Button>
       </S.Form>

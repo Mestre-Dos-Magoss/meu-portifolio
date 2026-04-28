@@ -68,12 +68,17 @@ export const InitialPresentation = styled.div`
     }
   }
 
+  h3 {
+    color: ${(props) => (props.theme as Theme).title};
+  }
+
   > img {
     width: 100%;
     max-width: 100%;
     height: 390px;
     border-radius: 12px;
     display: block;
+    margin-top: 64px;
   }
 
   p {

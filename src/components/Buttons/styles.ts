@@ -25,13 +25,17 @@ export const Botao = styled.button<Props>`
   color: ${(props) =>
     props.color === 'principal'
       ? (props.theme as Theme).title
-      : (props.theme as Theme).title};
+      : (props.theme as Theme).button.principal};
   cursor: pointer;
 
   img {
     margin-right: 8px;
     height: 16px;
     width: 16px;
+    filter: ${(props) =>
+      props.color === 'principal'
+        ? (props.theme as Theme).svgColors.secundaria
+        : (props.theme as Theme).svgColors.principal};
   }
 `
 
@@ -54,12 +58,16 @@ export const BotaoLink = styled.a<Props>`
   color: ${(props) =>
     props.color === 'principal'
       ? (props.theme as Theme).title
-      : (props.theme as Theme).title};
+      : (props.theme as Theme).button.principal};
   text-decoration: none;
 
   img {
     margin-right: 8px;
     height: 16px;
     width: 16px;
+    filter: ${(props) =>
+      props.color === 'principal'
+        ? (props.theme as Theme).svgColors.secundaria
+        : (props.theme as Theme).svgColors.principal};
   }
 `

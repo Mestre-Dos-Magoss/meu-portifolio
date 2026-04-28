@@ -15,12 +15,15 @@ export const LinkContacts = styled.a<Props>`
   border: 1px solid ${(props) => (props.theme as Theme).border};
   border-radius: 50%;
   background-color: ${(props) =>
-    props.color === 'principal' ? 'transparent' : '#f1f5f9'};
+    props.color === 'principal'
+      ? 'transparent'
+      : (props.theme as Theme).section.secundaria};
   transition: all ease 0.3s;
 
   img {
     width: 20px;
     height: 20px;
+    filter: ${(props) => (props.theme as Theme).svgColors.secundaria};
   }
 
   &:hover {
