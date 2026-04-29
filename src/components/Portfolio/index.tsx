@@ -52,7 +52,7 @@ const ProjectsTeste: CardProjectProps[] = [
     technologys: ['React', 'typescript', 'React Router'],
     linkRepos: 'https://github.com/Mestre-Dos-Magoss/minhas-tarefas.git',
     linkView: 'https://minhas-tarefas-xi-nine.vercel.app',
-    status: 'Planejando'
+    status: 'Concluído'
   }
 ]
 
