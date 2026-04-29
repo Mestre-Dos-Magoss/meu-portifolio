@@ -3,6 +3,10 @@ import { Botao } from '../Buttons/styles'
 import { breakPoints } from '../../styles/styles'
 import type { Theme } from '../../styles/Themes/light'
 
+type PropsColor = {
+  color: 'linkedin' | 'email'
+}
+
 export const CommunicationChannel = styled.div`
   display: block;
   text-align: start;
@@ -39,13 +43,15 @@ export const ListNetwork = styled.ul`
   }
 `
 
-export const NetWorkChannels = styled.a`
+export const NetWorkChannels = styled.a<PropsColor>`
+  display: block;
   padding: 24px;
   border: 1px solid ${(props) => (props.theme as Theme).border};
   border-radius: 12px;
   background-color: ${(props) => (props.theme as Theme).section.principal};
   color: ${(props) => (props.theme as Theme).title};
   text-decoration: none;
+  text-align: center;
   cursor: pointer;
 
   &:hover {
@@ -61,12 +67,17 @@ export const NetWorkChannels = styled.a`
     margin-bottom: 16px;
     border: none;
     border-radius: 50%;
-    background-color: #6255f143;
+    background-color: ${(props) =>
+      props.color === 'linkedin' ? '#0077b51a' : '#fb2c361a'};
   }
 
   img {
     width: 28px;
     height: 28px;
+    filter: ${(props) =>
+      props.color === 'linkedin'
+        ? (props.theme as Theme).svgUniqueColors.blue
+        : (props.theme as Theme).svgUniqueColors.red};
   }
 
   span {

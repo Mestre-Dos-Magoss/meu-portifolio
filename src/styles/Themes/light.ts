@@ -13,6 +13,10 @@ const Light = {
     secundaria:
       'brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(0%) hue-rotate(267deg) brightness(88%) contrast(107%);'
   },
+  svgUniqueColors: {
+    blue: 'brightness(0) saturate(100%) invert(36%) sepia(74%) saturate(3722%) hue-rotate(229deg) brightness(107%) contrast(89%);',
+    red: 'brightness(0) saturate(100%) invert(30%) sepia(77%) saturate(6879%) hue-rotate(344deg) brightness(100%) contrast(97%);'
+  },
   title: '#000',
   text: '#64748b',
   border: '#e2e8f0',
@@ -33,6 +37,10 @@ export type Theme = {
   svgColors: {
     principal: string
     secundaria?: string
+  }
+  svgUniqueColors: {
+    blue: string
+    red: string
   }
   title: string
   text: string

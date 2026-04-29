@@ -7,7 +7,7 @@ export const HeaderBar = styled.div`
   left: 0;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   border-bottom: 1px solid ${(props) => (props.theme as Theme).border};
   background-color: ${(props) => (props.theme as Theme).section.principal};
   color: ${(props) => (props.theme as Theme).title};

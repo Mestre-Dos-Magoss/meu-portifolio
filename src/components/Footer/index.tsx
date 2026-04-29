@@ -64,7 +64,7 @@ const Footer = () => {
                 name="Email"
                 description="Clique aqui para me enviar uma mensagem via email"
                 image={email}
-                link="#"
+                link="mailto:julianodev91@gmail.com"
               />
             </li>
           </ul>

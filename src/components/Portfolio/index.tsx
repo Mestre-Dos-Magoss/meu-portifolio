@@ -1,11 +1,11 @@
-import CardProjects from '../CardProjects'
+import CardProjects, { type CardProjectProps } from '../CardProjects'
 import Section from '../Sections'
 import games_store from '../../assets/games_store.png'
 import efood from '../../assets/efood.png'
 import lista_tarefas from '../../assets/lista_tarefas.png'
 import { ListProjects } from './styles'
 
-const ProjectsTeste = [
+const ProjectsTeste: CardProjectProps[] = [
   {
     image: games_store,
     title: 'Games Store',
@@ -17,6 +17,7 @@ const ProjectsTeste = [
       'Tratamento dos dados',
       'Validações e autenticação'
     ],
+    status: 'Em andamento',
     technologys: ['React', 'typescript', 'Express', 'PostgreSQL'],
     linkRepos: 'https://github.com/Mestre-Dos-Magoss/loja_de_jogos.git',
     linkView: 'https://loja-de-jogos-sigma.vercel.app'
@@ -32,6 +33,7 @@ const ProjectsTeste = [
       'Recebimento e envio dos dados',
       'Gerenciamento de estado com Redux'
     ],
+    status: 'Concluído',
     technologys: ['React', 'typescript', 'API Restful', 'Redux'],
     linkRepos: 'https://github.com/Mestre-Dos-Magoss/Efood.git',
     linkView: 'https://efood-iota-seven.vercel.app'
@@ -49,7 +51,8 @@ const ProjectsTeste = [
     ],
     technologys: ['React', 'typescript', 'React Router'],
     linkRepos: 'https://github.com/Mestre-Dos-Magoss/minhas-tarefas.git',
-    linkView: 'https://minhas-tarefas-xi-nine.vercel.app'
+    linkView: 'https://minhas-tarefas-xi-nine.vercel.app',
+    status: 'Planejando'
   }
 ]
 
@@ -70,7 +73,8 @@ const Porfolio = () => (
           features,
           technologys,
           linkRepos,
-          linkView
+          linkView,
+          status
         }) => (
           <li key={title}>
             <CardProjects
@@ -78,9 +82,10 @@ const Porfolio = () => (
               description={description}
               image={image}
               features={features}
-              technology={technologys}
+              technologys={technologys}
               linkRepos={linkRepos}
               linkView={linkView}
+              status={status}
             />
           </li>
         )

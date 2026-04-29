@@ -4,6 +4,7 @@ import { breakPoints } from '../../styles/styles'
 import type { Theme } from '../../styles/Themes/light'
 
 export const CardProjectContainer = styled.div`
+  position: relative;
   display: block;
   height: 100%;
   border: 1px solid ${(props) => (props.theme as Theme).border};
@@ -18,6 +19,15 @@ export const CardProjectContainer = styled.div`
     border-top-right-radius: 12px;
     border-top-left-radius: 12px;
   }
+`
+
+export const TagContainer = styled.div`
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 116px;
+  height: 12px;
+  z-index: 1;
 `
 
 export const descriptionProject = styled.div`

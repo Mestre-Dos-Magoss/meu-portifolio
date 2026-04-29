@@ -25,8 +25,7 @@ export const GlobalStyle = createGlobalStyle`
 
     @media (max-width: ${breakPoints.tablet}){
       padding: 0 32px;
-      width: 90%;
-      margin: 0;
+      width: 90%;;
     }
   }
 
@@ -117,6 +116,11 @@ export const InitialPresentation = styled.div`
       flex-direction: column;
       align-items: stretch;
       gap: 12px;
+    }
+
+    div:last-child {
+      flex-direction: row;
+      justify-content: center;
     }
   }
 

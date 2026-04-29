@@ -4,6 +4,7 @@ import Section from '../Sections'
 import * as S from './styles'
 import send from '../../assets/send.svg'
 import linkedin from '../../assets/linkedin.svg'
+import email from '../../assets/email.svg'
 
 const Communication = () => (
   <Section
@@ -22,6 +23,7 @@ const Communication = () => (
         </p>
         <S.ListNetwork>
           <S.NetWorkChannels
+            color="linkedin"
             href="https://linkedin.com/in/juliano-apolinário-devfullstack"
             target="_blank"
           >
@@ -31,26 +33,19 @@ const Communication = () => (
             <span>Linkedin</span>
           </S.NetWorkChannels>
           <S.NetWorkChannels
-            href="https://linkedin.com/in/juliano-apolinário-devfullstack"
+            color="email"
+            href="mailto:julianodev91@gmail.com"
             target="_blank"
           >
             <div>
-              <img src={linkedin} alt="Logo do LinkedIn" />
+              <img src={email} alt="Logo do Email" />
             </div>
-            <span>Linkedin</span>
-          </S.NetWorkChannels>
-          <S.NetWorkChannels
-            href="https://linkedin.com/in/juliano-apolinário-devfullstack"
-            target="_blank"
-          >
-            <div>
-              <img src={linkedin} alt="Logo do LinkedIn" />
-            </div>
-            <span>Linkedin</span>
+            <span>Email</span>
           </S.NetWorkChannels>
         </S.ListNetwork>
       </S.CommunicationChannel>
       <S.Form>
+        {/* //TODO: Implementar funcionalidade de envio de mensagem */}
         <S.InputField>
           <label htmlFor="nameMessenger">Nome</label>
           <input

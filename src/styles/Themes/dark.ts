@@ -13,6 +13,10 @@ const Dark = {
     secundaria:
       'brightness(0) saturate(100%) invert(99%) sepia(7%) saturate(550%) hue-rotate(239deg) brightness(114%) contrast(100%);'
   },
+  svgUniqueColors: {
+    blue: 'brightness(0) saturate(100%) invert(36%) sepia(74%) saturate(3722%) hue-rotate(229deg) brightness(107%) contrast(89%);',
+    red: 'brightness(0) saturate(100%) invert(30%) sepia(77%) saturate(6879%) hue-rotate(344deg) brightness(100%) contrast(97%);'
+  },
   title: '#fff',
   text: '#94a3b8',
   border: '#27272a',

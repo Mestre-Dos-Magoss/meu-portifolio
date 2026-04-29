@@ -3,15 +3,17 @@ import * as S from './styles'
 
 import github from '../../assets/github.svg'
 import redirect from '../../assets/redirect.svg'
+import Tag from '../Tag'
 
-type Props = {
+export type CardProjectProps = {
   title: string
   description: string
   image: string
   features: string[]
-  technology: string[]
+  technologys: string[]
   linkRepos: string
   linkView: string
+  status: 'Concluído' | 'Em andamento' | 'Planejando'
 }
 
 const CardProjects = ({
@@ -19,11 +21,15 @@ const CardProjects = ({
   description,
   image,
   features,
-  technology,
+  technologys,
   linkRepos,
-  linkView
-}: Props) => (
+  linkView,
+  status
+}: CardProjectProps) => (
   <S.CardProjectContainer title={`Project: ${title}`}>
+    <S.TagContainer>
+      <Tag status={status} />
+    </S.TagContainer>
     <img src={image} alt={`Imagem do projeto${title}`} />
     <S.descriptionProject>
       <h4>{title}</h4>
@@ -39,7 +45,7 @@ const CardProjects = ({
       </S.ListFeatures>
       <b>Tecnologias:</b>
       <S.ListTechnologysCard>
-        {technology.map((techs) => (
+        {technologys.map((techs) => (
           <li>{techs}</li>
         ))}
       </S.ListTechnologysCard>
