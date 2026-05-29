@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { ThemeProvider } from 'styled-components'
+
 import About from './components/About'
 import Communication from './components/Communication'
 import Footer from './components/Footer'
@@ -7,10 +9,12 @@ import Porfolio from './components/Portfolio'
 import Presentation from './components/Presentation'
 import Specialties from './components/Specialties'
 import Stacks from './components/Stacks'
+
 import { GlobalStyle } from './styles/styles'
-import { ThemeProvider } from 'styled-components'
 import light from './styles/Themes/light'
 import dark from './styles/Themes/dark'
+
+import { ModalProvider } from './utils/context/modal'
 
 function App() {
   const [isLightTheme, setIsLightTheme] = useState(true)
@@ -28,7 +32,9 @@ function App() {
         <About />
         <Specialties />
         <Stacks />
-        <Porfolio />
+        <ModalProvider>
+          <Porfolio />
+        </ModalProvider>
         <Communication />
         <Footer />
       </ThemeProvider>

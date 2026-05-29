@@ -1,5 +1,8 @@
 import styled, { createGlobalStyle } from 'styled-components'
+
 import type { Theme } from './Themes/light'
+
+import { BotaoLink } from '../components/Buttons/styles'
 
 export const breakPoints = {
   celular: '425px',
@@ -136,5 +139,38 @@ export const InitialPresentation = styled.div`
     > img {
       margin-top: 24px;
     }
+  }
+`
+export const ListTechnologysCard = styled.ul`
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  li {
+    display: block;
+    border-radius: 16px;
+    padding: 0 16px;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: ${(props) => (props.theme as Theme).section.secundaria};
+    color: ${(props) => (props.theme as Theme).button.secundaria};
+    border: 1px solid ${(props) => (props.theme as Theme).button.secundaria};
+  }
+`
+export const ButtonContainer = styled.div`
+  display: flex;
+  column-gap: 12px;
+  width: 100%;
+
+  ${BotaoLink} {
+    width: 100%;
+  }
+
+  @media (max-width: ${breakPoints.tablet}) {
+    flex-wrap: wrap;
+    gap: 12px;
   }
 `

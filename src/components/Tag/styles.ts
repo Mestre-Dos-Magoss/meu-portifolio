@@ -1,18 +1,20 @@
 import styled from 'styled-components'
 
 export const TagContainer = styled.div`
-  display: block;
-  background-color: ${(props) => props.color};
+  display: flex;
+  align-items: center;
   border-radius: 16px;
-  text-align: center;
-  height: 24px;
+  height: 16px;
 
   span {
-    display: block;
-    margin: 0 auto;
+    display: inline-block;
+    border-radius: 16px;
+    padding: 0 16px;
     font-size: 12px;
     font-weight: 600;
+    background-color: ${(props) => props.color};
     color: #fff;
     margin-left: 4px;
+    white-space: nowrap;
   }
 `
