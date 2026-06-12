@@ -2,6 +2,8 @@ import { createContext, useState } from 'react'
 
 import * as enuns from '../utils/enuns/status'
 
+type statusType = (typeof enuns.Status)[keyof typeof enuns.Status]
+
 export type DetailsProject = {
   icone: string
   title: string
@@ -17,7 +19,7 @@ export type ModalProps = {
   title: string
   description: string
   image: string
-  status: enuns.Status
+  status: statusType
   imagesProject?: string[]
   details: DetailsProject[]
   mainFeatures: MainFeatures[]
