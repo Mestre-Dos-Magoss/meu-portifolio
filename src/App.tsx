@@ -14,7 +14,9 @@ import { GlobalStyle } from './styles/styles'
 import light from './styles/Themes/light'
 import dark from './styles/Themes/dark'
 
-import { ModalProvider } from './utils/context/modal'
+import { ModalProvider } from './contexts/ModalContext'
+import { LanguageProvider } from './contexts/LanguageContext'
+import Translate from './components/Translate'
 
 function App() {
   const [isLightTheme, setIsLightTheme] = useState(true)
@@ -27,16 +29,19 @@ function App() {
     <>
       <GlobalStyle />
       <ThemeProvider theme={isLightTheme ? light : dark}>
-        <Header toggleTheme={toggleTheme} />
-        <Presentation />
-        <About />
-        <Specialties />
-        <Stacks />
-        <ModalProvider>
-          <Porfolio />
-        </ModalProvider>
-        <Communication />
-        <Footer />
+        <LanguageProvider>
+          <Translate />
+          <Header toggleTheme={toggleTheme} />
+          <Presentation />
+          <About />
+          <Specialties />
+          <Stacks />
+          <ModalProvider>
+            <Porfolio />
+          </ModalProvider>
+          <Communication />
+          <Footer />
+        </LanguageProvider>
       </ThemeProvider>
     </>
   )

@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+
 import Section from '../Sections'
 import { ListProjects } from './styles'
 
@@ -10,250 +12,242 @@ import target from '../../assets/target.svg'
 
 import * as enuns from '../../utils/enuns/status'
 import CardProjects, { type CardProjectProps } from '../CardProjects'
+import { LanguageContext } from '../../contexts/LanguageContext'
 
-const ProjectsTeste: CardProjectProps[] = [
-  {
-    image: gamesStore.gamesStore,
-    imagesProject: [
-      gamesStore.favorite,
-      gamesStore.cart,
-      gamesStore.buying,
-      gamesStore.empty,
-      gamesStore.libraryWithGames,
-      gamesStore.emptyLibrary,
-      gamesStore.register,
-      gamesStore.login
-    ],
-    title: 'Games Store',
-    description:
-      ' Desenvolvi uma plataforma de e-commerce de jogos utilizando React e TypeScript em conjunto com o Banco de Dados PostgreSQL, visando oferecer uma experiência de compra de jogos online eficiente e segura. A plataforma permite aos usuários navegar por uma ampla variedade de jogos, adicionar itens ao carrinho, realizar pagamentos e gerenciar suas bibliotecas de jogos, proporcionando uma experiência de compra fluida e satisfatória para os entusiastas de jogos online.',
-    features: [
-      'Integração com Banco de dados',
-      'Componentização',
-      'Tratamento dos dados',
-      'Validações e autenticação'
-    ],
-    status: enuns.Status.EM_ANDAMENTO,
-    technologys: [
-      'React',
-      'typescript',
-      'Express',
-      'PostgreSQL',
-      'Api Restful',
-      'Axios',
-      'Local Storage',
-      'Redux',
-      'Styled-Components',
-      'Context API',
-      'React-Router'
-    ],
-    linkRepos: 'https://github.com/Mestre-Dos-Magoss/loja_de_jogos.git',
-    linkView: 'https://loja-de-jogos-sigma.vercel.app',
-    details: [
-      {
-        icone: calendar,
-        title: 'Timeline',
-        description: enuns.Status.EM_ANDAMENTO
-      },
-      {
-        icone: peoples,
-        title: 'Equipe',
-        description: 'Solo'
-      },
-      {
-        icone: target,
-        title: 'Impacto',
-        description: 'Comunicação banco/frontend'
-      }
-    ],
-    mainFeatures: [
-      {
-        title: 'Integração com Banco de Dados',
-        description:
-          'Implementei uma integração eficiente com um banco de dados, permitindo o armazenamento seguro e a recuperação rápida de informações essenciais para a funcionalidade da plataforma. Essa integração garantiu que os dados dos usuários, jogos e transações fossem gerenciados de forma eficaz, proporcionando uma experiência de compra fluida e confiável para os usuários.'
-      },
-      {
-        title: 'Componentização e Reutilização de Código',
-        description:
-          'Adotei uma abordagem de componentização, criando componentes reutilizáveis e modulares para a plataforma de jogos. Essa prática permitiu uma estrutura de código mais organizada, facilitando a manutenção e a escalabilidade do projeto, além de promover a consistência visual e funcional em toda a aplicação.'
-      },
-      {
-        title: 'Tratamento de Dados e Validações',
-        description:
-          'Implementei um sistema robusto de tratamento de dados e validações, garantindo a integridade e a segurança das informações dos usuários durante o processo de compra. Com validações eficazes, os usuários foram protegidos contra entradas inválidas, proporcionando uma experiência de compra segura e confiável.'
-      },
-      {
-        title: 'Autenticação e Segurança',
-        description:
-          'Desenvolvi um sistema de autenticação seguro, permitindo que os usuários criem contas, façam login e gerenciem suas informações pessoais de forma protegida. Com medidas de segurança implementadas, os dados dos usuários foram protegidos contra acessos não autorizados, garantindo uma experiência de compra segura e confiável para todos os usuários da plataforma.'
-      }
-    ]
-  },
-  {
-    image: efood.efood,
-    imagesProject: [
-      efood.chooseRestaurant,
-      efood.chosenDish,
-      efood.cartWithProducts,
-      efood.delivery,
-      efood.payment,
-      efood.checkout
-    ],
-    title: 'Efood',
-    description:
-      ' Desenvolvi uma aplicação de delivery de comida utilizando React e TypeScript, proporcionando aos usuários uma experiência conveniente e eficiente para pedir suas refeições favoritas online. A aplicação permite aos usuários navegar por uma variedade de restaurantes e pratos, personalizar seus pedidos, gerenciar o carrinho de compras e finalizar a compra de forma simples e segura, oferecendo uma solução completa para atender às necessidades dos amantes de comida que buscam praticidade na hora de fazer seus pedidos.',
-    features: [
-      'Integração com API Restful',
-      'Checkout e carrinho de compras',
-      'Recebimento e envio dos dados',
-      'Gerenciamento de estado com Redux'
-    ],
-    status: enuns.Status.CONCLUIDO,
-    technologys: [
-      'React',
-      'typescript',
-      'API Restful',
-      'Redux',
-      'Styled-Components',
-      'React-Router',
-      'RTK Query'
-    ],
-    linkRepos: 'https://github.com/Mestre-Dos-Magoss/Efood.git',
-    linkView: 'https://efood-iota-seven.vercel.app',
-    details: [
-      {
-        icone: calendar,
-        title: 'Timeline',
-        description: '1 mês'
-      },
-      {
-        icone: peoples,
-        title: 'Equipe',
-        description: 'Solo'
-      },
-      {
-        icone: target,
-        title: 'Impacto',
-        description: 'Arquitetura frontend moderna'
-      }
-    ],
-    mainFeatures: [
-      {
-        title: 'Selecão de Restaurantes e Pratos',
-        description:
-          'Implementei uma funcionalidade de seleção de restaurantes e pratos, permitindo aos usuários navegar por uma variedade de opções gastronômicas. Com uma interface intuitiva, os usuários podem escolher seus pratos favoritos, personalizar pedidos e desfrutar de uma experiência de compra conveniente e agradável.'
-      },
-      {
-        title: 'Gerenciamento de Carrinho e Checkout',
-        description:
-          'Desenvolvi um sistema de gerenciamento de carrinho e checkout eficiente, permitindo aos usuários adicionar itens ao carrinho, revisar pedidos e finalizar a compra de forma simples e segura. Com uma interface intuitiva, os usuários podem navegar pelo processo de checkout com facilidade, garantindo uma experiência de compra fluida e satisfatória.'
-      },
-      {
-        title: 'Integração com API Restful',
-        description:
-          'Integrei a aplicação com uma API Restful, permitindo a comunicação eficiente entre o frontend e o backend. Essa integração possibilitou a troca de dados em tempo real, garantindo que os usuários tenham acesso às informações mais recentes sobre restaurantes, pratos e status dos pedidos, proporcionando uma experiência de compra dinâmica e atualizada.'
-      },
-      {
-        title: 'Gerenciamento de Estado com Redux',
-        description:
-          'Utilizei o Redux para gerenciar o estado da aplicação de forma eficiente, garantindo uma experiência de usuário fluida e consistente. Com o Redux, os dados do carrinho, seleção de restaurantes e status dos pedidos foram centralizados, facilitando a manutenção e escalabilidade da aplicação, além de proporcionar uma navegação suave e sem interrupções para os usuários.'
-      }
-    ]
-  },
-  {
-    image: lista_tarefas.listaTarefas,
-    imagesProject: [
-      lista_tarefas.filterCard,
-      lista_tarefas.filterSearch,
-      lista_tarefas.registerTask
-    ],
-    title: 'Lista de tarefas',
-    description:
-      'Desenvolvi uma aplicação de lista de tarefas utilizando React e TypeScript, permitindo aos usuários criar, organizar e gerenciar suas tarefas diárias de forma eficiente e intuitiva. Desde a criação de tarefas até a definição de prioridades, a aplicação oferece uma experiência completa para manter os usuários organizados e produtivos em suas atividades diárias.',
-    features: [
-      'Gerenciador de tarefas',
-      'Cadastramento de tarefas',
-      'Filtragem e ordenação de tarefas',
-      'Definicão de prioridades e prazos'
-    ],
-    technologys: ['React', 'typescript', 'React Router', 'Redux'],
-    linkRepos: 'https://github.com/Mestre-Dos-Magoss/minhas-tarefas.git',
-    linkView: 'https://minhas-tarefas-xi-nine.vercel.app',
-    status: enuns.Status.CONCLUIDO,
-    details: [
-      {
-        icone: calendar,
-        title: 'Timeline',
-        description: '1 mês'
-      },
-      {
-        icone: peoples,
-        title: 'Equipe',
-        description: 'Solo'
-      },
-      {
-        icone: target,
-        title: 'Impacto',
-        description: 'Domínio React/TypeScript'
-      }
-    ],
-    mainFeatures: [
-      {
-        title: 'Filtragem e Ordenação Avançada',
-        description:
-          'Implementei um sistema de filtragem e ordenação robusto, permitindo aos usuários organizar suas tarefas por data, prioridade ou status. A interface intuitiva torna fácil encontrar e gerenciar tarefas, aumentando a produtividade e a eficiência no dia a dia.'
-      },
-      {
-        title: 'Gerenciamento de Tarefas Personalizado',
-        description:
-          'Permiti aos usuários criar, editar e excluir tarefas de forma simples e eficiente. Com opções de categorização e definição de prioridades, os usuários podem personalizar sua lista de tarefas para atender às suas necessidades específicas, garantindo que nada importante seja esquecido.'
-      }
-    ]
-  }
-]
+const Porfolio = () => {
+  const { t } = useContext(LanguageContext)
 
-const Porfolio = () => (
-  <Section
-    color="principal"
-    title="Projetos em Destaque"
-    subTitle="Portfólio"
-    text="Alguns dos projetos que desenvolvi, desde MVPs até aplicações em produção atendendo milhares de usuários"
-    id="projects"
-  >
-    <ListProjects>
-      {ProjectsTeste.map(
-        ({
-          title,
-          description,
-          image,
-          features,
-          technologys,
-          linkRepos,
-          linkView,
-          status,
-          details,
-          mainFeatures,
-          imagesProject
-        }) => (
-          <li key={title}>
-            <CardProjects
-              title={title}
-              description={description}
-              image={image}
-              features={features}
-              technologys={technologys}
-              linkRepos={linkRepos}
-              linkView={linkView}
-              status={status}
-              details={details}
-              mainFeatures={mainFeatures}
-              imagesProject={imagesProject}
-            />
-          </li>
-        )
-      )}
-    </ListProjects>
-  </Section>
-)
+  const ProjectsTeste: CardProjectProps[] = [
+    {
+      image: gamesStore.gamesStore,
+      imagesProject: [
+        gamesStore.favorite,
+        gamesStore.cart,
+        gamesStore.buying,
+        gamesStore.empty,
+        gamesStore.libraryWithGames,
+        gamesStore.emptyLibrary,
+        gamesStore.register,
+        gamesStore.login
+      ],
+      title: `${t.Portfolio.GamesStore.title}`,
+      description: `${t.Portfolio.GamesStore.descriptionProject}`,
+      features: [
+        t.Portfolio.GamesStore.feature1,
+        t.Portfolio.GamesStore.feature2,
+        t.Portfolio.GamesStore.feature3,
+        t.Portfolio.GamesStore.feature4
+      ],
+      status: enuns.Status.EM_ANDAMENTO,
+      technologys: [
+        'React',
+        'typescript',
+        'Express',
+        'PostgreSQL',
+        'Api Restful',
+        'Axios',
+        'Local Storage',
+        'Redux',
+        'Styled-Components',
+        'Context API',
+        'React-Router'
+      ],
+      linkRepos: 'https://github.com/Mestre-Dos-Magoss/loja_de_jogos.git',
+      linkView: 'https://loja-de-jogos-sigma.vercel.app',
+      details: [
+        {
+          icone: calendar,
+          title: 'Timeline',
+          description: enuns.Status.EM_ANDAMENTO
+        },
+        {
+          icone: peoples,
+          title: `${t.Portfolio.GamesStore.details.peoples.title}`,
+          description: `${t.Portfolio.GamesStore.details.peoples.description}`
+        },
+        {
+          icone: target,
+          title: `${t.Portfolio.GamesStore.details.Impact.title}`,
+          description: `${t.Portfolio.GamesStore.details.Impact.description}`
+        }
+      ],
+      mainFeatures: [
+        {
+          title: `${t.Portfolio.GamesStore.MainFeatures.card1.title}`,
+          description: `${t.Portfolio.GamesStore.MainFeatures.card1.description}`
+        },
+        {
+          title: `${t.Portfolio.GamesStore.MainFeatures.card2.title}`,
+          description: `${t.Portfolio.GamesStore.MainFeatures.card2.description}`
+        },
+        {
+          title: `${t.Portfolio.GamesStore.MainFeatures.card3.title}`,
+          description: `${t.Portfolio.GamesStore.MainFeatures.card3.description}`
+        },
+        {
+          title: `${t.Portfolio.GamesStore.MainFeatures.card4.title}`,
+          description: `${t.Portfolio.GamesStore.MainFeatures.card4.description}`
+        }
+      ]
+    },
+    {
+      image: efood.efood,
+      imagesProject: [
+        efood.chooseRestaurant,
+        efood.chosenDish,
+        efood.cartWithProducts,
+        efood.delivery,
+        efood.payment,
+        efood.checkout
+      ],
+      title: `${t.Portfolio.Efood.title}`,
+      description: `${t.Portfolio.Efood.descriptionProject}`,
+      features: [
+        t.Portfolio.Efood.feature1,
+        t.Portfolio.Efood.feature2,
+        t.Portfolio.Efood.feature3,
+        t.Portfolio.Efood.feature4
+      ],
+      status: enuns.Status.CONCLUIDO,
+      technologys: [
+        'React',
+        'typescript',
+        'API Restful',
+        'Redux',
+        'Styled-Components',
+        'React-Router',
+        'RTK Query'
+      ],
+      linkRepos: 'https://github.com/Mestre-Dos-Magoss/Efood.git',
+      linkView: 'https://efood-iota-seven.vercel.app',
+      details: [
+        {
+          icone: calendar,
+          title: 'Timeline',
+          description: '1 mês'
+        },
+        {
+          icone: peoples,
+          title: `${t.Portfolio.Efood.details.peoples.title}`,
+          description: `${t.Portfolio.Efood.details.peoples.description}`
+        },
+        {
+          icone: target,
+          title: `${t.Portfolio.Efood.details.Impact.title}`,
+          description: `${t.Portfolio.Efood.details.Impact.description}`
+        }
+      ],
+      mainFeatures: [
+        {
+          title: `${t.Portfolio.Efood.MainFeatures.card1.title}`,
+          description: `${t.Portfolio.Efood.MainFeatures.card1.description}`
+        },
+        {
+          title: `${t.Portfolio.Efood.MainFeatures.card2.title}`,
+          description: `${t.Portfolio.Efood.MainFeatures.card2.description}`
+        },
+        {
+          title: `${t.Portfolio.Efood.MainFeatures.card3.title}`,
+          description: `${t.Portfolio.Efood.MainFeatures.card3.description}`
+        },
+        {
+          title: `${t.Portfolio.Efood.MainFeatures.card4.title}`,
+          description: `${t.Portfolio.Efood.MainFeatures.card4.description}`
+        }
+      ]
+    },
+    {
+      image: lista_tarefas.listaTarefas,
+      imagesProject: [
+        lista_tarefas.filterCard,
+        lista_tarefas.filterSearch,
+        lista_tarefas.registerTask
+      ],
+      title: `${t.Portfolio.ListaDeTarefas.title}`,
+      description: `${t.Portfolio.ListaDeTarefas.descriptionProject}`,
+      features: [
+        t.Portfolio.ListaDeTarefas.feature1,
+        t.Portfolio.ListaDeTarefas.feature2,
+        t.Portfolio.ListaDeTarefas.feature3,
+        t.Portfolio.ListaDeTarefas.feature4
+      ],
+      technologys: ['React', 'typescript', 'React Router', 'Redux'],
+      linkRepos: 'https://github.com/Mestre-Dos-Magoss/minhas-tarefas.git',
+      linkView: 'https://minhas-tarefas-xi-nine.vercel.app',
+      status: enuns.Status.CONCLUIDO,
+      details: [
+        {
+          icone: calendar,
+          title: 'Timeline',
+          description: '1 mês'
+        },
+        {
+          icone: peoples,
+          title: `${t.Portfolio.ListaDeTarefas.details.peoples.title}`,
+          description: `${t.Portfolio.ListaDeTarefas.details.peoples.description}`
+        },
+        {
+          icone: target,
+          title: `${t.Portfolio.ListaDeTarefas.details.Impact.title}`,
+          description: `${t.Portfolio.ListaDeTarefas.details.Impact.title}`
+        }
+      ],
+      mainFeatures: [
+        {
+          title: `${t.Portfolio.ListaDeTarefas.MainFeatures.card1.title}`,
+          description: `${t.Portfolio.ListaDeTarefas.MainFeatures.card1.description}`
+        },
+        {
+          title: `${t.Portfolio.ListaDeTarefas.MainFeatures.card2.title}`,
+          description: `${t.Portfolio.ListaDeTarefas.MainFeatures.card2.description}`
+        }
+      ]
+    }
+  ]
+
+  return (
+    <Section
+      color="principal"
+      title={t.Portfolio.title}
+      subTitle={t.Portfolio.Span}
+      text={t.Portfolio.description}
+      id="projects"
+    >
+      <ListProjects>
+        {ProjectsTeste.map(
+          ({
+            title,
+            description,
+            image,
+            features,
+            technologys,
+            linkRepos,
+            linkView,
+            status,
+            details,
+            mainFeatures,
+            imagesProject
+          }) => (
+            <li key={title}>
+              <CardProjects
+                title={title}
+                description={description}
+                image={image}
+                features={features}
+                technologys={technologys}
+                linkRepos={linkRepos}
+                linkView={linkView}
+                status={status}
+                details={details}
+                mainFeatures={mainFeatures}
+                imagesProject={imagesProject}
+              />
+            </li>
+          )
+        )}
+      </ListProjects>
+    </Section>
+  )
+}
 
 export default Porfolio

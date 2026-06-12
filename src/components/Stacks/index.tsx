@@ -1,6 +1,10 @@
+import { useContext } from 'react'
+
 import Section from '../Sections'
 import StackCard from '../StackCards'
 import * as S from './styles'
+
+import { LanguageContext } from '../../contexts/LanguageContext'
 
 const StackTeste = [
   {
@@ -51,23 +55,26 @@ const StackTeste = [
   { stack: 'Tailwind CSS', type: 'Styling' }
 ]
 
-const Stacks = () => (
-  <Section
-    color="secundária"
-    subTitle="Stack Tecnológica"
-    title="Tecnologias que Domino"
-    text="Ferramentas e tecnologias que utilizo no dia a dia para criar soluções
-        robustas e escaláveis"
-    id="stack"
-  >
-    <S.ListaStack>
-      {StackTeste.map((stack) => (
-        <li key={stack.stack}>
-          <StackCard stack={stack.stack} technology={stack.type} />
-        </li>
-      ))}
-    </S.ListaStack>
-  </Section>
-)
+const Stacks = () => {
+  const { t } = useContext(LanguageContext)
+
+  return (
+    <Section
+      color="secundária"
+      subTitle={t.Stacks.Span}
+      title={t.Stacks.title}
+      text={t.Stacks.text}
+      id="stack"
+    >
+      <S.ListaStack>
+        {StackTeste.map((stack) => (
+          <li key={stack.stack}>
+            <StackCard stack={stack.stack} technology={stack.type} />
+          </li>
+        ))}
+      </S.ListaStack>
+    </Section>
+  )
+}
 
 export default Stacks

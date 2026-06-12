@@ -1,6 +1,6 @@
 import { createContext, useState } from 'react'
 
-import * as enuns from '../../utils/enuns/status'
+import * as enuns from '../utils/enuns/status'
 
 export type DetailsProject = {
   icone: string

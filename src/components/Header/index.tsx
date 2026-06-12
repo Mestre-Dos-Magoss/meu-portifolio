@@ -1,7 +1,10 @@
+import { useContext, useState } from 'react'
+
 import * as S from './styles'
 import lua from '../../assets/lua.svg'
 import sol from '../../assets/sol.svg'
-import { useState } from 'react'
+
+import { LanguageContext } from '../../contexts/LanguageContext'
 
 type Props = {
   toggleTheme: () => void
@@ -9,6 +12,7 @@ type Props = {
 
 const Header = ({ toggleTheme }: Props) => {
   const [themeType, setThemeType] = useState('lua')
+  const { t } = useContext(LanguageContext)
 
   function toggleThemeType() {
     if (themeType === 'lua') {
@@ -28,24 +32,24 @@ const Header = ({ toggleTheme }: Props) => {
           <nav>
             <ul>
               <li>
-                <a href="#home">Início</a>
+                <a href="#home">{t.Header.opcoes.home}</a>
               </li>
               <li>
-                <a href="#about">Sobre</a>
+                <a href="#about">{t.Header.opcoes.about}</a>
               </li>
               <li>
-                <a href="#specialties">Habilidades</a>
+                <a href="#specialties">{t.Header.opcoes.skills}</a>
               </li>
               <li>
-                <a href="#projects">Projetos</a>
+                <a href="#projects">{t.Header.opcoes.projects}</a>
               </li>
               <li>
-                <a href="#contact">Contato</a>
+                <a href="#contact">{t.Header.opcoes.contact}</a>
               </li>
             </ul>
           </nav>
           <S.ButtonThema
-            title="Trocar tema"
+            title={t.Header.buttonTitle}
             type="button"
             onClick={() => {
               toggleTheme()
@@ -62,19 +66,19 @@ const Header = ({ toggleTheme }: Props) => {
         <S.NavRow>
           <ul>
             <li>
-              <a href="#home">Início</a>
+              <a href="#home">{t.Header.opcoes.home}</a>
             </li>
             <li>
-              <a href="#about">Sobre</a>
+              <a href="#about">{t.Header.opcoes.about}</a>
             </li>
             <li>
-              <a href="#specialties">Habilidades</a>
+              <a href="#specialties">{t.Header.opcoes.skills}</a>
             </li>
             <li>
-              <a href="#projects">Projetos</a>
+              <a href="#projects">{t.Header.opcoes.projects}</a>
             </li>
             <li>
-              <a href="#contact">Contato</a>
+              <a href="#contact">{t.Header.opcoes.contact}</a>
             </li>
           </ul>
         </S.NavRow>

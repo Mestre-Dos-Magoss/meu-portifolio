@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+
 import LinkNetWorks from '../LinkNetWorks'
 import * as S from './styles'
 
@@ -5,8 +7,11 @@ import linkedin from '../../assets/linkedin.svg'
 import github from '../../assets/github.svg'
 import email from '../../assets/email.svg'
 
+import { LanguageContext } from '../../contexts/LanguageContext'
+
 const Footer = () => {
   const currentYear = new Date().getFullYear()
+  const { t } = useContext(LanguageContext)
 
   return (
     <S.FooterFull>
@@ -15,36 +20,33 @@ const Footer = () => {
           <h2>
             <span>&lt;</span>Juliano Dev<span> / &gt;</span>
           </h2>
-          <p>
-            Desenvolvedor Full Stack apaixonado por criar experiências digitais
-            excepcionais.
-          </p>
+          <p>{t.Footer.text}</p>
         </div>
         <div>
-          <h4>Links Rápidos</h4>
+          <h4>{t.Footer.linksRapidos.title}</h4>
           <ul>
             <li>
-              <a href="#about">Sobre</a>
+              <a href="#about">{t.Footer.linksRapidos.about}</a>
             </li>
             <li>
-              <a href="#specialties">Habilidades</a>
+              <a href="#specialties">{t.Footer.linksRapidos.specialties}</a>
             </li>
             <li>
-              <a href="#projects">Projetos</a>
+              <a href="#projects">{t.Footer.linksRapidos.projects}</a>
             </li>
             <li>
-              <a href="#contact">Contatos</a>
+              <a href="#contact">{t.Footer.linksRapidos.contact}</a>
             </li>
           </ul>
         </div>
         <div>
-          <h4>Conecte-se</h4>
+          <h4>{t.Footer.conectse}</h4>
           <ul>
             <li>
               <LinkNetWorks
                 color="secundaria"
                 name="Github"
-                description="Clique aqui para acessar o meu repositório no GitHub"
+                description={t.LinkNetWorks.github}
                 image={github}
                 link="https://github.com/Mestre-Dos-Magoss"
               />
@@ -53,7 +55,7 @@ const Footer = () => {
               <LinkNetWorks
                 color="secundaria"
                 name="LinkedIn"
-                description="Clique aqui para acessar o meu perfil no LinkedIn"
+                description={t.LinkNetWorks.linkedin}
                 image={linkedin}
                 link="https://linkedin.com/in/juliano-apolinário-devfullstack"
               />
@@ -62,7 +64,7 @@ const Footer = () => {
               <LinkNetWorks
                 color="secundaria"
                 name="Email"
-                description="Clique aqui para me enviar uma mensagem via email"
+                description={t.LinkNetWorks.email}
                 image={email}
                 link="mailto:julianodev91@gmail.com"
               />
@@ -72,8 +74,8 @@ const Footer = () => {
       </S.FooterContainer>
       <S.Gracias>
         <p>
-          &copy; {currentYear} Juliano Dev. Feito com dedicação e muito &lt;/
-          &gt; código.💻☕
+          &copy; {currentYear} Juliano Dev. {t.Footer.text} &lt;/ &gt;{' '}
+          {t.Footer.finally}.💻☕
         </p>
       </S.Gracias>
     </S.FooterFull>

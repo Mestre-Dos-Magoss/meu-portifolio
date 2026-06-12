@@ -9,10 +9,13 @@ import close from '../../assets/close.svg'
 import redirect from '../../assets/redirect.svg'
 import github from '../../assets/github.svg'
 
-import { ModalContext } from '../../utils/context/modal'
+import { ModalContext } from '../../contexts/ModalContext'
+import { LanguageContext } from '../../contexts/LanguageContext'
 
 const Modal = () => {
   const { isOpenModal, modalData, closeModal } = useContext(ModalContext)
+  const { t } = useContext(LanguageContext)
+
   if (modalData && isOpenModal) {
     return (
       <S.ModalContainer className={isOpenModal ? 'isVisible' : ''}>
@@ -54,7 +57,7 @@ const Modal = () => {
                 </li>
               ))}
             </S.ImpactListAndDetails>
-            <h3>Principais Funcionalidades</h3>
+            <h3>{t.modalText.title1}</h3>
             <S.MainFeaturesList>
               {modalData.mainFeatures.map((mainF) => (
                 <li key={mainF.title}>
@@ -63,7 +66,7 @@ const Modal = () => {
                 </li>
               ))}
             </S.MainFeaturesList>
-            <h3>Stack Tecnológica</h3>
+            <h3>{t.modalText.title2}</h3>
             <ListTechnologysCard>
               {modalData.technologys.map((tech) => (
                 <li key={tech}>{tech}</li>
@@ -86,7 +89,7 @@ const Modal = () => {
                 link={modalData.linkView}
               >
                 <img src={redirect} alt="Imagem de redirecionamento" />
-                Ver demo Ao Vivo
+                {t.modalText.ButtonText}
               </Button>
             </ButtonContainer>
           </S.ModalContentBody>

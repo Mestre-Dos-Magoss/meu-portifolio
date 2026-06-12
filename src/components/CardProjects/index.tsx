@@ -9,9 +9,12 @@ import github from '../../assets/github.svg'
 import redirect from '../../assets/redirect.svg'
 
 import * as enums from '../../utils/enuns/status'
-import type { DetailsProject, MainFeatures } from '../../utils/context/modal'
-import { ModalContext } from '../../utils/context/modal'
+import type { DetailsProject, MainFeatures } from '../../contexts/ModalContext'
+import { ModalContext } from '../../contexts/ModalContext'
 import Modal from '../Modal/index'
+import { LanguageContext } from '../../contexts/LanguageContext'
+
+type statusType = (typeof enums.Status)[keyof typeof enums.Status]
 
 export type CardProjectProps = {
   title: string
@@ -22,7 +25,7 @@ export type CardProjectProps = {
   technologys: string[]
   linkRepos: string
   linkView: string
-  status: enums.Status
+  status: statusType
   details: DetailsProject[]
   mainFeatures: MainFeatures[]
 }
@@ -41,6 +44,7 @@ const CardProjects = ({
   mainFeatures
 }: CardProjectProps) => {
   const { openModal } = useContext(ModalContext)
+  const { t } = useContext(LanguageContext)
 
   function getDescription(description: string): string {
     return description.slice(0, 110) + '...'
@@ -75,13 +79,13 @@ const CardProjects = ({
           <b>Features:</b>
           <S.ListFeatures>
             {features.map((newFeature) => (
-              <div>
+              <div key={newFeature}>
                 <span></span>
-                <li key={newFeature}>{newFeature}</li>
+                <li>{newFeature}</li>
               </div>
             ))}
           </S.ListFeatures>
-          <b>Tecnologias:</b>
+          <b>{t.TecTitleCardProjects}</b>
           <ListTechnologysCard>
             {technologys.map(
               (techs, position) => position <= 2 && <li key={techs}>{techs}</li>

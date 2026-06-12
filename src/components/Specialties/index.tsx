@@ -1,4 +1,7 @@
+import { useContext } from 'react'
+
 import * as S from './styles'
+import Section from '../Sections'
 
 import type { Props } from '../CardSpecialties'
 
@@ -6,7 +9,8 @@ import code from '../../assets/code.svg'
 import layers from '../../assets/layers.svg'
 import database from '../../assets/database.svg'
 import CardSpecialties from '../CardSpecialties'
-import Section from '../Sections'
+
+import { LanguageContext } from '../../contexts/LanguageContext'
 
 const Especialidades: Props[] = [
   {
@@ -41,26 +45,28 @@ const Especialidades: Props[] = [
   }
 ]
 
-const Specialties = () => (
-  <Section
-    color="principal"
-    subTitle="Habilidades"
-    title="Áreas de Especialização"
-    id="specialties"
-  >
-    <S.Cardsgrid>
-      {Especialidades.map((stack) => (
-        <li key={stack.carrer}>
-          <CardSpecialties
-            carrer={stack.carrer}
-            color={stack.color}
-            image={stack.image}
-            technologies={stack.technologies}
-          />
-        </li>
-      ))}
-    </S.Cardsgrid>
-  </Section>
-)
-
+const Specialties = () => {
+  const { t } = useContext(LanguageContext)
+  return (
+    <Section
+      color="principal"
+      subTitle={t.Specialties.Span}
+      title={t.Specialties.title}
+      id="specialties"
+    >
+      <S.Cardsgrid>
+        {Especialidades.map((stack) => (
+          <li key={stack.carrer}>
+            <CardSpecialties
+              carrer={stack.carrer}
+              color={stack.color}
+              image={stack.image}
+              technologies={stack.technologies}
+            />
+          </li>
+        ))}
+      </S.Cardsgrid>
+    </Section>
+  )
+}
 export default Specialties
